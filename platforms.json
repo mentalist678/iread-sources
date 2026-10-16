@@ -1,0 +1,167 @@
+{
+  "note": "入口调查不代表书源可用；desktop_validated 也不代表已通过 iPhone 导入验收。",
+  "platforms": [
+    {
+      "id": "qidian",
+      "url": "https://www.qidian.com/",
+      "kind": "official",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "zongheng",
+      "url": "https://www.zongheng.com/",
+      "kind": "official",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "17k",
+      "url": "https://www.17k.com/",
+      "kind": "official",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "jjwxc",
+      "url": "https://www.jjwxc.net/",
+      "kind": "official",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "fanqie",
+      "url": "https://fanqienovel.com/",
+      "kind": "official",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "qimao",
+      "url": "https://www.qimao.com/",
+      "kind": "official",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "sfacg",
+      "url": "https://book.sfacg.com/",
+      "kind": "official",
+      "sourceStatus": "desktop_validated"
+    },
+    {
+      "id": "ciyuanji",
+      "url": "https://www.ciyuanji.com/",
+      "kind": "official",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "faloo",
+      "url": "https://wap.faloo.com/",
+      "kind": "official",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "bkneng",
+      "url": "https://wenxue.bkneng.com/",
+      "kind": "official",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "bimidu",
+      "url": "https://www.bimidu.com/",
+      "kind": "other",
+      "sourceStatus": "desktop_validated"
+    },
+    {
+      "id": "dingdian365",
+      "url": "https://www.dingdian365.com/",
+      "kind": "other",
+      "sourceStatus": "desktop_validated"
+    },
+    {
+      "id": "yodu",
+      "url": "https://www.yodu.org/",
+      "kind": "other",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "tushumi",
+      "url": "https://www.tushumi.cc/",
+      "kind": "other",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "wxzpyd",
+      "url": "https://www.wxzpyd.com/",
+      "kind": "other",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "wenxue88",
+      "url": "https://www.wenxue88.com/",
+      "kind": "other",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "txtduo",
+      "url": "https://www.txtduo.org/",
+      "kind": "other",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "dbxsd",
+      "url": "https://www.dbxsd.com/",
+      "kind": "other",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "ttshu8",
+      "url": "https://www.ttshu8.net/",
+      "kind": "other",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "ibabyjoy",
+      "url": "https://www.ibabyjoy.com/",
+      "kind": "other",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "biquge345",
+      "url": "https://www.biquge345.com/",
+      "kind": "other",
+      "sourceStatus": "desktop_validated"
+    },
+    {
+      "id": "biquge365",
+      "url": "https://www.biquge365.net/",
+      "kind": "other",
+      "sourceStatus": "desktop_validated"
+    },
+    {
+      "id": "paoshu",
+      "url": "https://www.ipaoshuba.net/",
+      "kind": "other",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "qb5",
+      "url": "https://www.qb5.io/",
+      "kind": "other",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "ixdzs",
+      "url": "https://ixdzs8.com/",
+      "kind": "other",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "69shuba",
+      "url": "https://www.69shuba.com/",
+      "kind": "other",
+      "sourceStatus": "candidate_only"
+    },
+    {
+      "id": "hetushu",
+      "url": "https://www.hetushu.com/",
+      "kind": "other",
+      "sourceStatus": "candidate_only"
+    }
+  ]
+}

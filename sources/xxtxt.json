@@ -1,0 +1,73 @@
+[
+  {
+    "name": "星星小说·适配试用20261016",
+    "homeUrl": "http://www.xxtxt.com",
+    "enable": true,
+    "weight": 60,
+    "priorityEncoding": 4,
+    "responseType": 0,
+    "authorId": "3ad7167f5883e93a86b450f9a219553c",
+    "bookWorld": {},
+    "needSupportDynTask": true,
+    "lastModifyTime": "2026-10-16 16:32:44",
+    "httpConfigs": {
+      "useCookies": true,
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130.0.0.0 Safari/537.36"
+      }
+    },
+    "searchBook": {
+      "forGetMethod": true,
+      "params": {
+        "q": "%@"
+      },
+      "parser": {
+        "_list": "//dl[dd/h3/a]",
+        "bookName": "normalize-space(substring-after(./dd/h3/a,\"]\"))",
+        "author": "./dd[contains(@class,\"book_other\")][1]/span/text()",
+        "coverUrl": "./dt/a/img/@src",
+        "_1": {
+          "dirURL": "./dd/h3/a/@href",
+          "helpId": "./dd/h3/a/@href"
+        }
+      },
+      "url": "http://www.xxtxt.com/search.php",
+      "maxPageCount": 1
+    },
+    "bookDetail": {
+      "forGetMethod": true,
+      "params": {},
+      "parser": {
+        "desc": "//div[@id=\"intro_pc\"]//text()",
+        "coverUrl": "//div[contains(@class,\"book_info\")]//img/@src"
+      },
+      "url": "@dyn:source.helpId"
+    },
+    "sourceDetail": {
+      "forGetMethod": true,
+      "params": {},
+      "parser": {
+        "_1": {
+          "_list": "//div[contains(concat(\" \",normalize-space(@class),\" \"),\" book_list2 \")]//li[a]",
+          "title": "./a/text()",
+          "url": "./a/@href"
+        }
+      },
+      "maxPageCount": 100,
+      "nextPageUrl": "(//ul[contains(@class,\"pagination\")]/li[contains(@class,\"active\")]/following-sibling::li[a/@href])[1]/a/@href",
+      "nextPageForGetMedthod": true,
+      "nextPageParams": {}
+    },
+    "chapterDetail": {
+      "forGetMethod": true,
+      "params": {},
+      "parser": {
+        "content": "//article[contains(@class,\"font_max\")]//text()[not(ancestor::script or ancestor::style or ancestor::a or ancestor::iframe)]"
+      },
+      "maxPageCount": 30,
+      "nextPageUrl": "(//a[@id=\"next\" or @id=\"next1\"][contains(@href,\"_\")])[1]/@href",
+      "nextPageForGetMedthod": true,
+      "nextPageParams": {}
+    }
+  }
+]

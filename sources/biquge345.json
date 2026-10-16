@@ -7,7 +7,7 @@
     "priorityEncoding": 4,
     "responseType": 0,
     "needSupportDynTask": true,
-    "lastModifyTime": "2026-10-16 11:06:37",
+    "lastModifyTime": "2026-10-16 12:07:20",
     "httpConfigs": {
       "useCookies": true,
       "headers": {
@@ -61,8 +61,10 @@
       "forGetMethod": true,
       "params": {},
       "parser": {
-        "content": "//div[@id=\"txt\"]"
+        "content": "//div[@id=\"txt\"]//text()[not(ancestor::script or ancestor::style or ancestor::a or ancestor::iframe)]"
       }
-    }
+    },
+    "authorId": "3ad7167f5883e93a86b450f9a219553c",
+    "bookWorld": {}
   }
 ]

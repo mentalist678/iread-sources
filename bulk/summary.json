@@ -1,0 +1,26 @@
+{
+  "processed": 1194,
+  "converted": 217,
+  "statuses": {
+    "native_adaptation_reused": 19,
+    "manual_adaptation_required": 977,
+    "statically_translated_unverified": 198
+  },
+  "duplicatesPreserved": true,
+  "liveVerification": false,
+  "snapshots": [
+    {
+      "label": "selected",
+      "url": "https://raw.githubusercontent.com/tickmao/Novel/4b4f00fa6f20c5af72eb24da02bcdea0dd2b1e8f/sources/legado/full.json",
+      "sha256": "d1adad8807307029f5540699970a3cf754ff3a9174624df23379ba3cb1f12fa7",
+      "count": 194
+    },
+    {
+      "label": "main",
+      "url": "https://raw.githubusercontent.com/tickmao/Novel/7a3c19b80fee33228e4dfa955ed23d41db6f0067/sources/legado/main/full.json",
+      "sha256": "f9c7b1093f308bffc36806e89cf25a9ed6fac859b96c88d44e1dfe0e454b9707",
+      "count": 1000
+    }
+  ],
+  "checkedAt": "2026-10-16T08:55:49.788314+00:00"
+}

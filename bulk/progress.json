@@ -1,8 +1,8 @@
 {
   "baselineCommit": "033319b7b778f467059088da1e7340f38c32c9eb",
   "baseline": 217,
-  "current": 502,
-  "newlyTranslated": 286,
+  "current": 527,
+  "newlyTranslated": 311,
   "withheld": 1,
   "newIds": [
     "main-0005",
@@ -11,6 +11,7 @@
     "main-0014",
     "main-0015",
     "main-0024",
+    "main-0027",
     "main-0028",
     "main-0032",
     "main-0035",
@@ -25,6 +26,8 @@
     "main-0081",
     "main-0083",
     "main-0090",
+    "main-0095",
+    "main-0096",
     "main-0097",
     "main-0102",
     "main-0109",
@@ -41,6 +44,7 @@
     "main-0144",
     "main-0145",
     "main-0148",
+    "main-0152",
     "main-0163",
     "main-0167",
     "main-0168",
@@ -66,13 +70,17 @@
     "main-0249",
     "main-0252",
     "main-0259",
+    "main-0261",
     "main-0263",
     "main-0264",
     "main-0269",
     "main-0276",
+    "main-0279",
     "main-0285",
     "main-0289",
     "main-0294",
+    "main-0300",
+    "main-0301",
     "main-0312",
     "main-0313",
     "main-0314",
@@ -86,6 +94,7 @@
     "main-0337",
     "main-0338",
     "main-0340",
+    "main-0346",
     "main-0348",
     "main-0363",
     "main-0365",
@@ -94,10 +103,13 @@
     "main-0384",
     "main-0390",
     "main-0392",
+    "main-0393",
+    "main-0394",
     "main-0395",
     "main-0399",
     "main-0401",
     "main-0402",
+    "main-0406",
     "main-0408",
     "main-0409",
     "main-0416",
@@ -115,12 +127,14 @@
     "main-0444",
     "main-0445",
     "main-0447",
+    "main-0449",
     "main-0451",
     "main-0452",
     "main-0453",
     "main-0462",
     "main-0464",
     "main-0487",
+    "main-0495",
     "main-0496",
     "main-0497",
     "main-0501",
@@ -138,6 +152,8 @@
     "main-0542",
     "main-0544",
     "main-0545",
+    "main-0548",
+    "main-0549",
     "main-0550",
     "main-0553",
     "main-0555",
@@ -156,8 +172,10 @@
     "main-0618",
     "main-0623",
     "main-0625",
+    "main-0626",
     "main-0627",
     "main-0628",
+    "main-0629",
     "main-0632",
     "main-0633",
     "main-0634",
@@ -213,14 +231,17 @@
     "main-0830",
     "main-0831",
     "main-0832",
+    "main-0833",
     "main-0834",
     "main-0843",
     "main-0849",
+    "main-0850",
     "main-0856",
     "main-0871",
     "main-0873",
     "main-0875",
     "main-0880",
+    "main-0882",
     "main-0891",
     "main-0893",
     "main-0902",
@@ -260,6 +281,7 @@
     "main-0988",
     "main-0989",
     "main-0990",
+    "main-0994",
     "selected-0002",
     "selected-0003",
     "selected-0006",
@@ -276,7 +298,9 @@
     "selected-0070",
     "selected-0080",
     "selected-0085",
+    "selected-0096",
     "selected-0097",
+    "selected-0108",
     "selected-0113",
     "selected-0128",
     "selected-0140",
@@ -286,6 +310,7 @@
     "selected-0150",
     "selected-0156",
     "selected-0160",
+    "selected-0164",
     "selected-0167",
     "selected-0173",
     "selected-0174",
@@ -305,10 +330,10 @@
     }
   ],
   "remainingByPriority": {
-    "1": 55,
+    "1": 38,
     "2": 19,
-    "3": 97,
-    "4": 521
+    "3": 85,
+    "4": 525
   },
   "remaining": [
     {
@@ -325,7 +350,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
         "body pagination: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "embedded credential header requires review"
       ],
       "priority": 4
     },
@@ -336,8 +361,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: unsupported selector: ://api.wanshu.com/novel/chapterList?novel_id={$.novel_id}",
-        "chapterUrl: unsupported selector: ://api.wanshu.com/novel/chapterInfo?novel_chapter_id={$.id}",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -391,7 +414,7 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: unsupported collection/combinator",
+        "chapterList: unsupported selector: [itemprop~=chapter]",
         "chapterTitle: ordered combination requires adaptation",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: ordered combination requires adaptation"
@@ -456,7 +479,6 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "bookName: regex replacement capture syntax needs adaptation",
-        "chapterList: unsupported collection/combinator",
         "request: request options contain expressions rather than literal data"
       ],
       "priority": 3
@@ -468,10 +490,10 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: unsupported selector: ://bookapi.zongheng.com/api/chapter/getChapterList",
-        "chapterUrl: unsupported selector: ://read.zongheng.com/chapter/{$.bookId}/{$.chapterId}.html"
+        "bookUrl: URL includes request-specific options",
+        "chapterUrl: URL template combines multiple JSON fields"
       ],
-      "priority": 1
+      "priority": 4
     },
     {
       "id": "selected-0027",
@@ -497,7 +519,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "embedded credential header requires review"
       ],
       "priority": 4
     },
@@ -543,7 +565,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookName: indexed or absolute fallback needs context-aware mapping",
         "bookUrl: first-only regex replacement needs adaptation",
         "chapterList: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
@@ -561,7 +582,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookName: indexed or absolute fallback needs context-aware mapping",
         "bookUrl: first-only regex replacement needs adaptation",
         "chapterList: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
@@ -609,8 +629,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: unsupported selector: ://api.wanshu.com/novel/chapterList?novel_id={$.novel_id}",
-        "chapterUrl: unsupported selector: ://api.wanshu.com/novel/chapterInfo?novel_chapter_id={$.id}",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -634,8 +652,7 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "request: requires WebView",
-        "body pagination: unsupported selector: +li"
+        "request: requires WebView"
       ],
       "priority": 4
     },
@@ -672,8 +689,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
         "request: dynamic request logic",
-        "directory URL: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "directory URL: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -704,7 +720,6 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: JSON query needs filter/recursive mapping",
-        "bookUrl: unsupported selector: /i/{$.NovelID}/",
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
@@ -816,8 +831,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: JSON query needs filter/recursive mapping",
-        "bookUrl: unsupported selector: ://boxnovel.baidu.com/boxnovel/wiseapi/chapterList?bookid={$.bookId}&p",
-        "chapterUrl: unsupported collection/combinator",
+        "chapterUrl: URL template combines multiple JSON fields",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -861,8 +875,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: mixed-parser fallback requires adaptation",
-        "bookUrl: unsupported selector: ://m.taomanhua.com/api/getcomicinfo_body/?comic_id={$.comic_id}&produc",
         "chapterList: unsupported selector: -$.data.comic_chapter.*",
         "chapterTitle: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
@@ -893,7 +905,7 @@
       "reasons": [
         "bookUrl: runtime JavaScript or variable dependency",
         "request: dynamic request logic",
-        "directory URL: unsupported collection/combinator"
+        "directory URL: unsupported selector: [href~=catalog]"
       ],
       "priority": 4
     },
@@ -1072,7 +1084,7 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: unsupported collection/combinator",
+        "chapterList: unsupported selector: [itemprop~=chapter]",
         "chapterTitle: ordered combination requires adaptation",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: ordered combination requires adaptation"
@@ -1230,22 +1242,9 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency",
         "chapterUrl: missing rule",
-        "body: unsupported collection/combinator"
+        "body: unsupported selector: :not(.mw-parser-output > h2:nth-of-type(2) ~ p)"
       ],
       "priority": 4
-    },
-    {
-      "id": "selected-0096",
-      "name": "刺猬猫吧",
-      "homeUrl": "https://www.ciweimao.com",
-      "warnings": [
-        "login features not ported; public access only"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "searchList: indexed or absolute fallback needs context-aware mapping"
-      ],
-      "priority": 1
     },
     {
       "id": "selected-0098",
@@ -1334,8 +1333,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: unsupported selector: ://api.wanshu.com/novel/chapterList?novel_id={$.novel_id}",
-        "chapterUrl: unsupported selector: ://api.wanshu.com/novel/chapterInfo?novel_chapter_id={$.id}",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -1383,21 +1380,10 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterList: JSON query needs filter/recursive mapping",
-        "chapterUrl: unsupported selector: ://www.iqiyi.com/manhua/reader/{$.comicId}_{$.episodeId}.html",
+        "chapterUrl: URL template combines multiple JSON fields",
         "directory URL: runtime JavaScript or variable dependency"
       ],
       "priority": 4
-    },
-    {
-      "id": "selected-0108",
-      "name": "御书屋",
-      "homeUrl": "https://m.po18xs.com/",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "bookName: indexed or absolute fallback needs context-aware mapping"
-      ],
-      "priority": 1
     },
     {
       "id": "selected-0111",
@@ -1471,7 +1457,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterTitle: indexed or absolute fallback needs context-aware mapping",
         "chapterUrl: unsupported selector: {baseUrl}"
       ],
       "priority": 1
@@ -1486,7 +1471,7 @@
         "searchList: JSON query needs filter/recursive mapping",
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: JSON query needs filter/recursive mapping",
-        "chapterUrl: unsupported selector: ://book.midukanshu.com/book/chapter/segment/master/{$.bookId}_{$.chapt",
+        "chapterUrl: URL template combines multiple JSON fields",
         "body: JSON query needs filter/recursive mapping"
       ],
       "priority": 4
@@ -1591,7 +1576,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: indexed or absolute fallback needs context-aware mapping",
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
@@ -1637,9 +1621,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: indexed or absolute fallback needs context-aware mapping",
-        "chapterTitle: indexed or absolute fallback needs context-aware mapping",
-        "body: indexed or absolute fallback needs context-aware mapping",
         "request: dynamic request logic"
       ],
       "priority": 3
@@ -1693,7 +1674,6 @@
       "reasons": [
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: runtime JavaScript or variable dependency",
-        "chapterTitle: mixed-parser fallback requires adaptation",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
@@ -1707,11 +1687,10 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: ordered combination requires adaptation",
-        "bookName: mixed-parser fallback requires adaptation",
+        "searchList: JSON query needs filter/recursive mapping",
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterTitle: JSON query needs filter/recursive mapping",
-        "chapterUrl: unsupported selector: ://app-cdn.jjwxc.net/androidapi/chapterContent?novelId={$.novelid}&cha",
+        "chapterUrl: URL template combines multiple JSON fields",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -1725,7 +1704,7 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: unsupported collection/combinator",
+        "chapterList: unsupported selector: [itemprop~=chapter]",
         "chapterTitle: ordered combination requires adaptation",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: ordered combination requires adaptation"
@@ -1820,7 +1799,7 @@
         "searchList: JSON query needs filter/recursive mapping",
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: JSON query needs filter/recursive mapping",
-        "chapterUrl: unsupported selector: ://book.midukanshu.com/book/chapter/segment/master/{$.bookId}_{$.chapt",
+        "chapterUrl: URL template combines multiple JSON fields",
         "body: JSON query needs filter/recursive mapping",
         "request: dynamic request logic"
       ],
@@ -1833,8 +1812,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: mixed-parser fallback requires adaptation",
-        "bookName: mixed-parser fallback requires adaptation",
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency"
@@ -1848,8 +1825,7 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "request: dynamic request logic",
-        "dynamic or invalid headers"
+        "request: dynamic request logic"
       ],
       "priority": 3
     },
@@ -1884,19 +1860,6 @@
         "directory pagination: runtime JavaScript or variable dependency"
       ],
       "priority": 4
-    },
-    {
-      "id": "selected-0164",
-      "name": "天天书吧",
-      "homeUrl": "https://m.ttshu8.com",
-      "warnings": [
-        "directory pagination requires selected option marker; no marker stops pagination"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "dynamic or invalid headers"
-      ],
-      "priority": 3
     },
     {
       "id": "selected-0165",
@@ -1976,7 +1939,6 @@
         "bookName: runtime JavaScript or variable dependency",
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: runtime JavaScript or variable dependency",
-        "chapterTitle: mixed-parser fallback requires adaptation",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
         "request: dynamic request logic"
@@ -2038,7 +2000,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: mixed-parser fallback requires adaptation",
         "bookName: runtime JavaScript or variable dependency",
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: unsupported selector: -$.data.[*]",
@@ -2068,11 +2029,8 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: unsupported selector: /novel/novelInfo?novel_id={$.novel_id}",
         "chapterTitle: unsupported selector: {$.is_free}🔒{$.name}",
-        "chapterUrl: unsupported selector: /novel/chapterInfo?novel_chapter_id={$.id}",
-        "body: runtime JavaScript or variable dependency",
-        "directory URL: unsupported selector: /novel/chapterList?page=1&pageSize=10000&novel_id={$.data.novel_id}"
+        "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -2088,7 +2046,7 @@
       "reasons": [
         "request: dynamic request logic",
         "body pagination: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "embedded credential header requires review"
       ],
       "priority": 4
     },
@@ -2130,7 +2088,6 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: unsupported selector: :(?s)(\\d+)\" class=\"(isvip)?[^\"]*name[^>]*>([^<]*)",
         "chapterTitle: JSON query needs filter/recursive mapping",
-        "chapterUrl: unsupported selector: ://a.heiyan.com/ajax/chapter/content/$1",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -2205,9 +2162,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: indexed or absolute fallback needs context-aware mapping",
-        "chapterTitle: indexed or absolute fallback needs context-aware mapping",
-        "body: indexed or absolute fallback needs context-aware mapping",
         "request: dynamic request logic"
       ],
       "priority": 3
@@ -2219,9 +2173,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: indexed or absolute fallback needs context-aware mapping",
-        "chapterTitle: indexed or absolute fallback needs context-aware mapping",
-        "body: indexed or absolute fallback needs context-aware mapping",
         "request: dynamic request logic"
       ],
       "priority": 3
@@ -2247,7 +2198,7 @@
         "searchList: JSON query needs filter/recursive mapping",
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: JSON query needs filter/recursive mapping",
-        "chapterUrl: unsupported selector: ://book.midukanshu.com/book/chapter/segment/master/{$.bookId}_{$.chapt",
+        "chapterUrl: URL template combines multiple JSON fields",
         "body: JSON query needs filter/recursive mapping",
         "request: dynamic request logic"
       ],
@@ -2263,7 +2214,7 @@
         "searchList: JSON query needs filter/recursive mapping",
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: JSON query needs filter/recursive mapping",
-        "chapterUrl: unsupported selector: ://book.midukanshu.com/book/chapter/segment/master/{$.bookId}_{$.chapt",
+        "chapterUrl: URL template combines multiple JSON fields",
         "body: JSON query needs filter/recursive mapping"
       ],
       "priority": 4
@@ -2403,19 +2354,6 @@
         "request: requires WebView"
       ],
       "priority": 4
-    },
-    {
-      "id": "main-0027",
-      "name": "书农文学",
-      "homeUrl": "http://www.shunong.com#🎃",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "searchList: indexed or absolute fallback needs context-aware mapping",
-        "bookName: indexed or absolute fallback needs context-aware mapping",
-        "bookUrl: indexed or absolute fallback needs context-aware mapping"
-      ],
-      "priority": 1
     },
     {
       "id": "main-0029",
@@ -2650,7 +2588,7 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency",
         "chapterUrl: missing rule",
-        "body: unsupported collection/combinator"
+        "body: unsupported selector: :not(.mw-parser-output > h2:nth-of-type(2) ~ p)"
       ],
       "priority": 4
     },
@@ -2706,7 +2644,7 @@
         "searchList: JSON query needs filter/recursive mapping",
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: JSON query needs filter/recursive mapping",
-        "chapterUrl: unsupported selector: ://book.midukanshu.com/book/chapter/segment/master/{$.bookId}_{$.chapt",
+        "chapterUrl: URL template combines multiple JSON fields",
         "body: JSON query needs filter/recursive mapping",
         "request: dynamic request logic"
       ],
@@ -2722,7 +2660,7 @@
         "searchList: JSON query needs filter/recursive mapping",
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: JSON query needs filter/recursive mapping",
-        "chapterUrl: unsupported selector: ://book.midukanshu.com/book/chapter/segment/master/{$.bookId}_{$.chapt",
+        "chapterUrl: URL template combines multiple JSON fields",
         "body: JSON query needs filter/recursive mapping",
         "request: dynamic request logic"
       ],
@@ -2858,8 +2796,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: unsupported selector: ://api.wanshu.com/novel/chapterList?novel_id={$.novel_id}",
-        "chapterUrl: unsupported selector: ://api.wanshu.com/novel/chapterInfo?novel_chapter_id={$.id}",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -2873,8 +2809,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: unsupported selector: ://api.wanshu.com/novel/chapterList?novel_id={$.novel_id}",
-        "chapterUrl: unsupported selector: ://api.wanshu.com/novel/chapterInfo?novel_chapter_id={$.id}",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -2966,8 +2900,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: unsupported selector: ://api.wanshu.com/novel/chapterList?novel_id={$.novel_id}",
-        "chapterUrl: unsupported selector: ://api.wanshu.com/novel/chapterInfo?novel_chapter_id={$.id}",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -3018,8 +2950,7 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "request: dynamic request logic",
-        "dynamic or invalid headers"
+        "request: dynamic request logic"
       ],
       "priority": 3
     },
@@ -3038,28 +2969,6 @@
       "priority": 4
     },
     {
-      "id": "main-0095",
-      "name": "周易易学",
-      "homeUrl": "http://www.taijizhidian.com#🎃",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterList: indexed or absolute fallback needs context-aware mapping"
-      ],
-      "priority": 1
-    },
-    {
-      "id": "main-0096",
-      "name": "天天小说",
-      "homeUrl": "https://cn.ttkan.co/",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "dynamic or invalid headers"
-      ],
-      "priority": 3
-    },
-    {
       "id": "main-0098",
       "name": "晋江文学城",
       "homeUrl": "http://www.jjwxc.net#🎃",
@@ -3071,7 +2980,7 @@
       "reasons": [
         "bookUrl: first-only regex replacement needs adaptation",
         "chapterTitle: JSON query needs filter/recursive mapping",
-        "chapterUrl: unsupported selector: ://app-cdn.jjwxc.net/androidapi/chapterContent?novelId={$.novelid}&cha",
+        "chapterUrl: URL template combines multiple JSON fields",
         "body: runtime JavaScript or variable dependency",
         "directory URL: dynamic directory request"
       ],
@@ -3084,11 +2993,10 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: ordered combination requires adaptation",
-        "bookName: mixed-parser fallback requires adaptation",
+        "searchList: JSON query needs filter/recursive mapping",
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterTitle: JSON query needs filter/recursive mapping",
-        "chapterUrl: unsupported selector: ://app-cdn.jjwxc.net/androidapi/chapterContent?novelId={$.novelid}&cha",
+        "chapterUrl: URL template combines multiple JSON fields",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -3418,7 +3326,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookName: indexed or absolute fallback needs context-aware mapping",
         "body: ordered combination requires adaptation"
       ],
       "priority": 1
@@ -3431,17 +3338,6 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "request: request options contain expressions rather than literal data"
-      ],
-      "priority": 3
-    },
-    {
-      "id": "main-0152",
-      "name": "同人圈子",
-      "homeUrl": "http://199.33.126.51/",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "dynamic or invalid headers"
       ],
       "priority": 3
     },
@@ -3579,11 +3475,10 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: ordered combination requires adaptation",
-        "bookName: mixed-parser fallback requires adaptation",
+        "searchList: JSON query needs filter/recursive mapping",
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterTitle: JSON query needs filter/recursive mapping",
-        "chapterUrl: unsupported selector: ://app-cdn.jjwxc.net/androidapi/chapterContent?novelId={$.novelid}&cha",
+        "chapterUrl: URL template combines multiple JSON fields",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -3650,7 +3545,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: indexed or absolute fallback needs context-aware mapping",
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
@@ -3779,8 +3673,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
         "request: dynamic request logic",
-        "directory URL: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "directory URL: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -4087,8 +3980,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterUrl: runtime JavaScript or variable dependency",
-        "body: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -4102,8 +3994,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: unsupported collection/combinator",
-        "chapterList: unsupported collection/combinator",
         "request: request-specific headers require review"
       ],
       "priority": 3
@@ -4209,17 +4099,6 @@
       "priority": 4
     },
     {
-      "id": "main-0261",
-      "name": "同人圈",
-      "homeUrl": "http://199.33.126.51#🎃",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "dynamic or invalid headers"
-      ],
-      "priority": 3
-    },
-    {
       "id": "main-0262",
       "name": "布咕阅读",
       "homeUrl": "http://www.bgwxc.com/",
@@ -4237,8 +4116,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: unsupported selector: ://api.wanshu.com/novel/chapterList?novel_id={$.novel_id}",
-        "chapterUrl: unsupported selector: ://api.wanshu.com/novel/chapterInfo?novel_chapter_id={$.id}",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -4327,8 +4204,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "request: request options contain expressions rather than literal data",
-        "body pagination: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "body pagination: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -4355,19 +4231,7 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterTitle: unsupported collection/combinator"
-      ],
-      "priority": 1
-    },
-    {
-      "id": "main-0279",
-      "name": "爱尚小说",
-      "homeUrl": "http://www.23hh.la/",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "searchList: indexed or absolute fallback needs context-aware mapping",
-        "bookName: indexed or absolute fallback needs context-aware mapping"
+        "chapterTitle: unsupported selector: [style~=width:100%;]"
       ],
       "priority": 1
     },
@@ -4397,7 +4261,7 @@
       "reasons": [
         "request: dynamic request logic",
         "body pagination: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "embedded credential header requires review"
       ],
       "priority": 4
     },
@@ -4422,8 +4286,7 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "request: requires WebView",
-        "dynamic or invalid headers"
+        "request: requires WebView"
       ],
       "priority": 4
     },
@@ -4478,7 +4341,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookName: indexed or absolute fallback needs context-aware mapping",
         "bookUrl: first-only regex replacement needs adaptation",
         "chapterList: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
@@ -4496,7 +4358,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookName: indexed or absolute fallback needs context-aware mapping",
         "bookUrl: first-only regex replacement needs adaptation",
         "chapterList: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
@@ -4551,30 +4412,6 @@
       "priority": 4
     },
     {
-      "id": "main-0300",
-      "name": "三三言情",
-      "homeUrl": "https://www.sansanyanqing.com",
-      "warnings": [
-        "directory pagination requires selected option marker; no marker stops pagination"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterList: unsupported selector: +div"
-      ],
-      "priority": 1
-    },
-    {
-      "id": "main-0301",
-      "name": "三五中文网",
-      "homeUrl": "https://m.guigushi2.com/",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "dynamic or invalid headers"
-      ],
-      "priority": 3
-    },
-    {
       "id": "main-0302",
       "name": "书农小说",
       "homeUrl": "http://www.yueleshow.com#🎃",
@@ -4583,8 +4420,7 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookName: first-only regex replacement needs adaptation",
-        "body: unsupported selector: :not(:has(a))"
+        "bookName: first-only regex replacement needs adaptation"
       ],
       "priority": 1
     },
@@ -4636,7 +4472,7 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: unsupported collection/combinator"
+        "chapterList: unsupported selector: [href~=/read/\\d+]"
       ],
       "priority": 1
     },
@@ -4771,8 +4607,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "request: request options contain expressions rather than literal data",
-        "body pagination: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "body pagination: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -4788,7 +4623,7 @@
       "reasons": [
         "request: dynamic request logic",
         "body pagination: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "embedded credential header requires review"
       ],
       "priority": 4
     },
@@ -4812,8 +4647,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: unsupported collection/combinator",
-        "chapterList: unsupported collection/combinator",
         "request: request-specific headers require review",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
@@ -4853,17 +4686,6 @@
         "request: dynamic request logic"
       ],
       "priority": 3
-    },
-    {
-      "id": "main-0346",
-      "name": "爱尚小说",
-      "homeUrl": "https://www.23hh.la",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "bookName: indexed or absolute fallback needs context-aware mapping"
-      ],
-      "priority": 1
     },
     {
       "id": "main-0347",
@@ -4969,8 +4791,8 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: unsupported selector: +",
-        "chapterList: unsupported selector: +"
+        "searchList: unsupported selector: :#nr",
+        "chapterList: unsupported selector: :#list"
       ],
       "priority": 1
     },
@@ -4992,8 +4814,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: unsupported collection/combinator",
-        "chapterList: unsupported collection/combinator",
         "request: request-specific headers require review",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
@@ -5043,8 +4863,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: unsupported selector: ://api.wanshu.com/novel/chapterList?novel_id={$.novel_id}",
-        "chapterUrl: unsupported selector: ://api.wanshu.com/novel/chapterInfo?novel_chapter_id={$.id}",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -5136,7 +4954,6 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: JSON query needs filter/recursive mapping",
-        "bookUrl: unsupported selector: /i/{$.NovelID}/",
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
@@ -5221,28 +5038,6 @@
       "priority": 2
     },
     {
-      "id": "main-0393",
-      "name": "阅读电子",
-      "homeUrl": "https://book.vik.im/",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "dynamic or invalid headers"
-      ],
-      "priority": 3
-    },
-    {
-      "id": "main-0394",
-      "name": "阅读电子书屋",
-      "homeUrl": "https://book.vik.im#🎃",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "dynamic or invalid headers"
-      ],
-      "priority": 3
-    },
-    {
       "id": "main-0396",
       "name": "顶点小说",
       "homeUrl": "http://m.dibanyou.com#🎃",
@@ -5289,7 +5084,7 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency",
         "chapterUrl: missing rule",
-        "body: unsupported collection/combinator"
+        "body: unsupported selector: :not(.mw-parser-output > h2:nth-of-type(2) ~ p)"
       ],
       "priority": 4
     },
@@ -5319,17 +5114,6 @@
         "request: embedded credential parameter requires review"
       ],
       "priority": 4
-    },
-    {
-      "id": "main-0406",
-      "name": "梦笔阁小说网",
-      "homeUrl": "http://www.mengbige.com",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "bookName: indexed or absolute fallback needs context-aware mapping"
-      ],
-      "priority": 1
     },
     {
       "id": "main-0407",
@@ -5373,8 +5157,7 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "body: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -5429,8 +5212,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "body: runtime JavaScript or variable dependency",
-        "directory URL: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "directory URL: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -5493,8 +5275,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "request: dynamic request logic",
-        "body pagination: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "body pagination: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -5572,19 +5353,6 @@
       "priority": 3
     },
     {
-      "id": "main-0449",
-      "name": "千千小说",
-      "homeUrl": "http://www.qqxiaowo.net",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "searchList: indexed or absolute fallback needs context-aware mapping",
-        "bookName: indexed or absolute fallback needs context-aware mapping",
-        "bookUrl: indexed or absolute fallback needs context-aware mapping"
-      ],
-      "priority": 1
-    },
-    {
       "id": "main-0450",
       "name": "桔纸书屋",
       "homeUrl": "https://m.juzhishuwu.com",
@@ -5602,8 +5370,8 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: unsupported selector: +",
-        "chapterList: unsupported selector: +"
+        "searchList: unsupported selector: :.listconl",
+        "chapterList: unsupported selector: :.clearfix"
       ],
       "priority": 1
     },
@@ -5789,10 +5557,10 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: unsupported selector: ://bookapi.zongheng.com/api/chapter/getChapterList",
-        "chapterUrl: unsupported selector: ://read.zongheng.com/chapter/{$.bookId}/{$.chapterId}.html"
+        "bookUrl: URL includes request-specific options",
+        "chapterUrl: URL template combines multiple JSON fields"
       ],
-      "priority": 1
+      "priority": 4
     },
     {
       "id": "main-0473",
@@ -6019,7 +5787,7 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: ordered combination requires adaptation",
+        "searchList: JSON query needs filter/recursive mapping",
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
@@ -6081,17 +5849,6 @@
       "priority": 3
     },
     {
-      "id": "main-0495",
-      "name": "周易易学",
-      "homeUrl": "http://www.taijizhidian.com#",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterList: indexed or absolute fallback needs context-aware mapping"
-      ],
-      "priority": 1
-    },
-    {
       "id": "main-0498",
       "name": "天下书盟",
       "homeUrl": "http://www.fbook.net#",
@@ -6109,9 +5866,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: indexed or absolute fallback needs context-aware mapping",
-        "bookName: indexed or absolute fallback needs context-aware mapping",
-        "bookUrl: indexed or absolute fallback needs context-aware mapping",
         "chapterList: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -6123,7 +5877,7 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: unsupported collection/combinator",
+        "chapterList: unsupported selector: [itemprop~=chapter]",
         "chapterTitle: ordered combination requires adaptation",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: ordered combination requires adaptation"
@@ -6139,7 +5893,7 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: unsupported collection/combinator",
+        "chapterList: unsupported selector: [itemprop~=chapter]",
         "chapterTitle: ordered combination requires adaptation",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: ordered combination requires adaptation"
@@ -6168,7 +5922,7 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterTitle: unsupported collection/combinator"
+        "chapterTitle: unsupported selector: [style~=width:100%;]"
       ],
       "priority": 1
     },
@@ -6215,10 +5969,10 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: unsupported selector: ://bookapi.zongheng.com/api/chapter/getChapterList",
-        "chapterUrl: unsupported selector: ://read.zongheng.com/chapter/{$.bookId}/{$.chapterId}.html"
+        "bookUrl: URL includes request-specific options",
+        "chapterUrl: URL template combines multiple JSON fields"
       ],
-      "priority": 1
+      "priority": 4
     },
     {
       "id": "main-0514",
@@ -6292,7 +6046,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookName: indexed or absolute fallback needs context-aware mapping",
         "bookUrl: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -6358,10 +6111,10 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: unsupported selector: +",
+        "searchList: unsupported selector: :.search_list",
         "bookName: runtime JavaScript or variable dependency",
         "bookUrl: runtime JavaScript or variable dependency",
-        "chapterList: unsupported selector: +",
+        "chapterList: unsupported selector: :.jcdf_box",
         "body: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: ordered combination requires adaptation"
@@ -6375,10 +6128,10 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: unsupported selector: +",
+        "searchList: unsupported selector: :.search_list",
         "bookName: runtime JavaScript or variable dependency",
         "bookUrl: runtime JavaScript or variable dependency",
-        "chapterList: unsupported selector: +",
+        "chapterList: unsupported selector: :.jcdf_box",
         "body: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: ordered combination requires adaptation"
@@ -6413,30 +6166,6 @@
       "priority": 4
     },
     {
-      "id": "main-0548",
-      "name": "努努书坊",
-      "homeUrl": "https://www.kanunu8.com/",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "searchList: unsupported selector: :has(font)",
-        "chapterList: unsupported selector: :has(td[width])"
-      ],
-      "priority": 1
-    },
-    {
-      "id": "main-0549",
-      "name": "努努书坊",
-      "homeUrl": "http://www.kanunu8.com/",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "searchList: unsupported selector: :has(font)",
-        "chapterList: unsupported selector: :has(td[width])"
-      ],
-      "priority": 1
-    },
-    {
       "id": "main-0551",
       "name": "博趣中文网",
       "homeUrl": "https://www.1bqg.net/",
@@ -6446,7 +6175,6 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: runtime JavaScript or variable dependency",
-        "chapterList: unsupported collection/combinator",
         "body: runtime JavaScript or variable dependency",
         "request: request options contain expressions rather than literal data"
       ],
@@ -6671,8 +6399,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "request: request-specific headers require review",
-        "body pagination: first-only regex replacement needs adaptation",
-        "dynamic or invalid headers"
+        "body pagination: first-only regex replacement needs adaptation"
       ],
       "priority": 3
     },
@@ -6683,10 +6410,9 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "directory pagination selects all options; next-page semantics require adaptation",
-        "dynamic or invalid headers"
+        "directory pagination selects all options; next-page semantics require adaptation"
       ],
-      "priority": 3
+      "priority": 2
     },
     {
       "id": "main-0591",
@@ -6709,8 +6435,7 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "directory URL: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "directory URL: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -6734,7 +6459,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: indexed or absolute fallback needs context-aware mapping",
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
@@ -6827,7 +6551,6 @@
       "reasons": [
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: runtime JavaScript or variable dependency",
-        "chapterTitle: mixed-parser fallback requires adaptation",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
@@ -6865,8 +6588,7 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "request: request options contain expressions rather than literal data",
-        "dynamic or invalid headers"
+        "request: request options contain expressions rather than literal data"
       ],
       "priority": 3
     },
@@ -6907,10 +6629,9 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "body: ordered combination requires adaptation",
-        "dynamic or invalid headers"
+        "body: ordered combination requires adaptation"
       ],
-      "priority": 3
+      "priority": 1
     },
     {
       "id": "main-0611",
@@ -6974,34 +6695,12 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: unsupported collection/combinator",
+        "chapterList: unsupported selector: :matches(章节目录|目录章节)",
         "body: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
       "priority": 4
-    },
-    {
-      "id": "main-0626",
-      "name": "笔趣阁",
-      "homeUrl": "https://m.biquge.one",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "dynamic or invalid headers"
-      ],
-      "priority": 3
-    },
-    {
-      "id": "main-0629",
-      "name": "笔趣阁",
-      "homeUrl": "https://m.biquge.one#🎃",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "dynamic or invalid headers"
-      ],
-      "priority": 3
     },
     {
       "id": "main-0630",
@@ -7034,7 +6733,6 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: invalid XPath: Invalid expression",
-        "bookName: indexed or absolute fallback needs context-aware mapping",
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
         "body pagination: regex replacement capture syntax needs adaptation"
@@ -7320,7 +7018,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "embedded credential header requires review"
       ],
       "priority": 4
     },
@@ -7393,7 +7091,6 @@
       "reasons": [
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: runtime JavaScript or variable dependency",
-        "chapterTitle: mixed-parser fallback requires adaptation",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
@@ -7409,7 +7106,7 @@
       "reasons": [
         "bookUrl: runtime JavaScript or variable dependency",
         "request: dynamic request logic",
-        "directory URL: unsupported collection/combinator"
+        "directory URL: unsupported selector: [href~=catalog]"
       ],
       "priority": 4
     },
@@ -7822,7 +7519,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: indexed or absolute fallback needs context-aware mapping",
         "request: dynamic request logic",
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
@@ -7999,7 +7695,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: indexed or absolute fallback needs context-aware mapping",
         "chapterTitle: runtime JavaScript or variable dependency",
         "dynamic or invalid headers"
       ],
@@ -8130,9 +7825,8 @@
         "chapterList: invalid XPath: Invalid expression",
         "body: runtime JavaScript or variable dependency",
         "request: dynamic request logic",
-        "directory pagination: unsupported selector: +",
         "body pagination: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "embedded credential header requires review"
       ],
       "priority": 4
     },
@@ -8192,7 +7886,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: dynamic request logic",
         "body pagination: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "embedded credential header requires review"
       ],
       "priority": 4
     },
@@ -8234,7 +7928,6 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: JSON query needs filter/recursive mapping",
-        "bookUrl: unsupported selector: /i/{$.NovelID}/",
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
@@ -8413,7 +8106,6 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: runtime JavaScript or variable dependency",
-        "bookName: indexed or absolute fallback needs context-aware mapping",
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
         "directory URL: regex replacement capture syntax needs adaptation",
@@ -8475,8 +8167,7 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "chapterList: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -8487,8 +8178,7 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "chapterList: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -8561,17 +8251,6 @@
         "body: missing rule"
       ],
       "priority": 4
-    },
-    {
-      "id": "main-0833",
-      "name": "太子爷小说网",
-      "homeUrl": "http://www.tzy2.com#🎃",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "bookName: indexed or absolute fallback needs context-aware mapping"
-      ],
-      "priority": 1
     },
     {
       "id": "main-0835",
@@ -8687,17 +8366,6 @@
         "request: dynamic request logic"
       ],
       "priority": 4
-    },
-    {
-      "id": "main-0850",
-      "name": "新斋书苑",
-      "homeUrl": "http://www.sodu60.com/",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "bookName: indexed or absolute fallback needs context-aware mapping"
-      ],
-      "priority": 1
     },
     {
       "id": "main-0851",
@@ -8888,20 +8556,9 @@
         "body: runtime JavaScript or variable dependency",
         "request: dynamic request logic",
         "body pagination: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "embedded credential header requires review"
       ],
       "priority": 4
-    },
-    {
-      "id": "main-0882",
-      "name": "笔趣阁小说网",
-      "homeUrl": "https://m.honeyhoneywedding.com#🎃",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "body pagination: indexed or absolute fallback needs context-aware mapping"
-      ],
-      "priority": 2
     },
     {
       "id": "main-0883",
@@ -8963,8 +8620,7 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "request: dynamic request logic",
-        "dynamic or invalid headers"
+        "request: dynamic request logic"
       ],
       "priority": 3
     },
@@ -8993,9 +8649,9 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "request: dynamic request logic",
-        "dynamic or invalid headers"
+        "embedded credential header requires review"
       ],
-      "priority": 3
+      "priority": 4
     },
     {
       "id": "main-0892",
@@ -9007,9 +8663,8 @@
         "chapterList: invalid XPath: Invalid expression",
         "body: runtime JavaScript or variable dependency",
         "request: dynamic request logic",
-        "directory pagination: unsupported selector: +",
         "body pagination: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "embedded credential header requires review"
       ],
       "priority": 4
     },
@@ -9118,8 +8773,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "bookUrl: runtime JavaScript or variable dependency",
-        "book initialization: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "book initialization: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -9197,7 +8851,7 @@
         "request: request options contain expressions rather than literal data",
         "directory URL: runtime JavaScript or variable dependency",
         "body pagination: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "embedded credential header requires review"
       ],
       "priority": 4
     },
@@ -9214,7 +8868,7 @@
         "request: request options contain expressions rather than literal data",
         "directory URL: runtime JavaScript or variable dependency",
         "body pagination: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "embedded credential header requires review"
       ],
       "priority": 4
     },
@@ -9291,7 +8945,7 @@
       "reasons": [
         "request: dynamic request logic",
         "body pagination: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "embedded credential header requires review"
       ],
       "priority": 4
     },
@@ -9307,7 +8961,7 @@
       "reasons": [
         "request: dynamic request logic",
         "body pagination: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "embedded credential header requires review"
       ],
       "priority": 4
     },
@@ -9340,10 +8994,10 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: unsupported selector: +",
+        "searchList: unsupported selector: :.item",
         "bookName: runtime JavaScript or variable dependency",
         "bookUrl: runtime JavaScript or variable dependency",
-        "chapterList: unsupported selector: +",
+        "chapterList: unsupported selector: :.section-list",
         "directory URL: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -9411,7 +9065,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "bookName: JSON query needs filter/recursive mapping",
-        "bookUrl: unsupported selector: ://novel.html5.qq.com/qbread/api/book/all-chapter?bookId=${url}`",
+        "bookUrl: URL includes request-specific options",
         "chapterList: JSON query needs filter/recursive mapping",
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: dynamic directory request",
@@ -9458,7 +9112,6 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: unsupported selector: :(?s)(\\d+)\" class=\"(isvip)?[^\"]*name[^>]*>([^<]*)",
         "chapterTitle: JSON query needs filter/recursive mapping",
-        "chapterUrl: unsupported selector: ://a.heiyan.com/ajax/chapter/content/$1",
         "body: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
       ],
@@ -9474,7 +9127,6 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: unsupported selector: :(?s)(\\d+)\" class=\"(isvip)?[^\"]*name[^>]*>([^<]*)",
         "chapterTitle: JSON query needs filter/recursive mapping",
-        "chapterUrl: unsupported selector: ://a.heiyan.com/ajax/chapter/content/$1",
         "body: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
       ],
@@ -9501,7 +9153,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookName: indexed or absolute fallback needs context-aware mapping",
         "directory URL: regex replacement capture syntax needs adaptation"
       ],
       "priority": 2
@@ -9588,7 +9239,7 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: ordered combination requires adaptation",
+        "searchList: JSON query needs filter/recursive mapping",
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
@@ -9607,8 +9258,7 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "directory pagination: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "directory pagination: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -9621,8 +9271,7 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "directory pagination: runtime JavaScript or variable dependency",
-        "dynamic or invalid headers"
+        "directory pagination: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -9653,28 +9302,15 @@
       "priority": 4
     },
     {
-      "id": "main-0994",
-      "name": "书馆中文",
-      "homeUrl": "http://www.sgwaa.com/",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "searchList: indexed or absolute fallback needs context-aware mapping",
-        "bookName: indexed or absolute fallback needs context-aware mapping",
-        "bookUrl: indexed or absolute fallback needs context-aware mapping"
-      ],
-      "priority": 1
-    },
-    {
       "id": "main-0995",
       "name": "云轩阁",
       "homeUrl": "http://www.yunxuange.cc#🎃",
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookName: unsupported collection/combinator",
+        "bookName: unsupported selector: [class~=bookname|book_name|title|searchBookName]",
         "bookUrl: first-only regex replacement needs adaptation",
-        "body: unsupported collection/combinator"
+        "body: unsupported selector: [id~=content]"
       ],
       "priority": 1
     },
@@ -9746,7 +9382,7 @@
     }
   ],
   "validation": {
-    "behaviorTests": 13,
+    "behaviorTests": 16,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false

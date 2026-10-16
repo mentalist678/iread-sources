@@ -1,0 +1,65 @@
+[
+  {
+    "name": "天地中文公开章节·适配试用20261016",
+    "homeUrl": "http://www.tiandizw.com",
+    "enable": true,
+    "weight": 60,
+    "priorityEncoding": 4,
+    "responseType": 0,
+    "authorId": "3ad7167f5883e93a86b450f9a219553c",
+    "bookWorld": {},
+    "needSupportDynTask": true,
+    "lastModifyTime": "2026-10-16 16:32:44",
+    "httpConfigs": {
+      "useCookies": true,
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130.0.0.0 Safari/537.36"
+      }
+    },
+    "searchBook": {
+      "forGetMethod": true,
+      "params": {
+        "keyword": "%@",
+        "Paixu": "0",
+        "page": "1"
+      },
+      "parser": {
+        "_list": "//li[div[@class=\"content\"]/h3/a]",
+        "bookName": "normalize-space(./div[@class=\"content\"]/h3/a)",
+        "author": "normalize-space(substring-after(./div[@class=\"content\"]/span[@class=\"author\"][1],\"作者：\"))",
+        "_1": {
+          "helpId": "./div[@class=\"content\"]/h3/a/@href",
+          "dirURL": "concat(\"http://www.tiandizw.com/newbooklist/\",substring-after(./div[@class=\"content\"]/h3/a/@href,\"/newbookinfo/\"))"
+        }
+      },
+      "url": "http://www.tiandizw.com/search.php/newindex",
+      "maxPageCount": 1
+    },
+    "bookDetail": {
+      "forGetMethod": true,
+      "params": {},
+      "parser": {
+        "desc": "//div[@class=\"bookintro\"]/p[@class=\"intro\"]//text()"
+      },
+      "url": "@dyn:source.helpId"
+    },
+    "sourceDetail": {
+      "forGetMethod": true,
+      "params": {},
+      "parser": {
+        "_1": {
+          "_list": "//li[a[contains(@href,\"/newcontent/\")] and not(.//*[contains(@class,\"vip\") or contains(@class,\"lock\")])]",
+          "title": "./a//text()",
+          "url": "./a/@href"
+        }
+      }
+    },
+    "chapterDetail": {
+      "forGetMethod": true,
+      "params": {},
+      "parser": {
+        "content": "//div[contains(concat(\" \",@class,\" \"),\" xsDetail \")]//text()[not(ancestor::script or ancestor::style or ancestor::a or ancestor::iframe)]"
+      }
+    }
+  }
+]

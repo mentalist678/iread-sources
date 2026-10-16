@@ -1,0 +1,70 @@
+[
+  {
+    "name": "顶点小说365·20261016",
+    "homeUrl": "https://www.dingdian365.com",
+    "enable": true,
+    "weight": 65,
+    "priorityEncoding": 4,
+    "responseType": 0,
+    "needSupportDynTask": true,
+    "lastModifyTime": "2026-10-16 12:07:20",
+    "httpConfigs": {
+      "useCookies": true,
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130.0.0.0 Safari/537.36"
+      }
+    },
+    "searchBook": {
+      "forGetMethod": false,
+      "params": {
+        "s": "%@",
+        "type": "articlename"
+      },
+      "parser": {
+        "_list": "//ul[@class=\"search\"]/li[span[@class=\"name\"]/a]",
+        "bookName": "./span[@class=\"name\"]/a/text()",
+        "author": "./span[@class=\"zuo\"]/a/text()",
+        "typeText": "./span[@class=\"lei\"]/a/text()",
+        "_1": {
+          "dirURL": "concat(\"https://www.dingdian365.com/newbook/\",substring-after(./span[@class=\"name\"]/a/@href,\"/book/\"))",
+          "helpId": "concat(\"https://www.dingdian365.com\",./span[@class=\"name\"]/a/@href)"
+        }
+      },
+      "url": "https://www.dingdian365.com/s.php",
+      "maxPageCount": 1
+    },
+    "bookDetail": {
+      "forGetMethod": true,
+      "params": {},
+      "parser": {
+        "coverUrl": "//meta[@property=\"og:image\"]/@content",
+        "desc": "//meta[@property=\"og:description\"]/@content",
+        "typeText": "//meta[@property=\"og:novel:category\"]/@content",
+        "statusText": "//meta[@property=\"og:novel:status\"]/@content"
+      },
+      "url": "@dyn:source.helpId"
+    },
+    "sourceDetail": {
+      "forGetMethod": true,
+      "params": {},
+      "parser": {
+        "_1": {
+          "_list": "//ul[@class=\"info\"]/li[a[starts-with(@href,\"/chapter/\")]]",
+          "title": "./a/text()",
+          "url": "./a/@href"
+        },
+        "lastChapterTitle": "//meta[@property=\"og:novel:latest_chapter_name\"]/@content",
+        "lastUpdateDate": "normalize-space(substring-after(//div[@class=\"xinxi\"]/span[contains(.,\"更新时间：\")],\"更新时间：\"))"
+      }
+    },
+    "chapterDetail": {
+      "forGetMethod": true,
+      "params": {},
+      "parser": {
+        "content": "//div[@id=\"txt\"]//text()[not(ancestor::script or ancestor::style or ancestor::a or ancestor::iframe)]"
+      }
+    },
+    "authorId": "3ad7167f5883e93a86b450f9a219553c",
+    "bookWorld": {}
+  }
+]

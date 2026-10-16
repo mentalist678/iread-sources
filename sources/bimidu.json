@@ -1,0 +1,72 @@
+[
+  {
+    "name": "笔迷读·20261016",
+    "homeUrl": "https://www.bimidu.com",
+    "enable": true,
+    "weight": 75,
+    "priorityEncoding": 4,
+    "responseType": 0,
+    "needSupportDynTask": true,
+    "lastModifyTime": "2026-10-16 12:07:20",
+    "httpConfigs": {
+      "useCookies": true,
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130.0.0.0 Safari/537.36"
+      },
+      "customFormatValueParam": "JxdSecuritySub.Gb2312Encoded:value"
+    },
+    "searchBook": {
+      "forGetMethod": false,
+      "params": {
+        "searchkey": "%@",
+        "submit": "搜索"
+      },
+      "parser": {
+        "_list": "//ul[contains(@class,\"newlist\")]/li[div[contains(@class,\"newlist-title\")]/a]",
+        "bookName": "./div[contains(@class,\"newlist-title\")]/a/text()",
+        "author": "./div[contains(@class,\"newlist-zz\")]/a/text()",
+        "_1": {
+          "dirURL": "./div[contains(@class,\"newlist-title\")]/a/@href",
+          "helpId": "./div[contains(@class,\"newlist-title\")]/a/@href"
+        }
+      },
+      "url": "https://www.bimidu.com/modules/article/search.php",
+      "maxPageCount": 1
+    },
+    "bookDetail": {
+      "forGetMethod": true,
+      "params": {},
+      "parser": {
+        "coverUrl": "//meta[@property=\"og:image\"]/@content",
+        "desc": "//meta[@property=\"og:description\"]/@content",
+        "typeText": "//meta[@property=\"og:novel:category\"]/@content",
+        "statusText": "//meta[@property=\"og:novel:status\"]/@content"
+      },
+      "url": "@dyn:source.helpId"
+    },
+    "sourceDetail": {
+      "forGetMethod": true,
+      "params": {},
+      "parser": {
+        "_1": {
+          "_list": "(//ul[contains(@class,\"dirlist\")])[last()]/li[a]",
+          "title": "./a/text()",
+          "url": "./a/@href"
+        }
+      }
+    },
+    "chapterDetail": {
+      "forGetMethod": true,
+      "params": {},
+      "parser": {
+        "content": "//div[@id=\"nr1\"]//text()[not(ancestor::script or ancestor::style or ancestor::a or ancestor::iframe)]"
+      },
+      "maxPageCount": 50,
+      "nextPageUrl": "(//a[contains(normalize-space(.),\"下一页\") and contains(@href,\"-\")])[1]/@href",
+      "nextPageForGetMedthod": true,
+      "nextPageParams": {}
+    },
+    "authorId": "3ad7167f5883e93a86b450f9a219553c",
+    "bookWorld": {}
+  }
+]

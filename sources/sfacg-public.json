@@ -1,0 +1,66 @@
+[
+  {
+    "name": "SF轻小说公开章节·20261016",
+    "homeUrl": "https://book.sfacg.com",
+    "enable": true,
+    "weight": 70,
+    "priorityEncoding": 4,
+    "responseType": 0,
+    "needSupportDynTask": true,
+    "lastModifyTime": "2026-10-16 11:06:37",
+    "httpConfigs": {
+      "useCookies": true,
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130.0.0.0 Safari/537.36"
+      }
+    },
+    "searchBook": {
+      "forGetMethod": true,
+      "params": {
+        "Key": "%@",
+        "S": "1"
+      },
+      "parser": {
+        "_list": "//ul[li/strong/a[contains(@href,\"book.sfacg.com/Novel/\")]]",
+        "bookName": "./li/strong/a/text()",
+        "author": "normalize-space(substring-before(substring-after(string(.),\"综合信息：\"),\"/\"))",
+        "coverUrl": "./li/img/@src",
+        "_1": {
+          "dirURL": "concat(./li/strong/a/@href,\"/MainIndex/\")",
+          "helpId": "./li/strong/a/@href"
+        }
+      },
+      "url": "https://s.sfacg.com/",
+      "maxPageCount": 1
+    },
+    "bookDetail": {
+      "forGetMethod": true,
+      "params": {},
+      "parser": {
+        "coverUrl": "//div[@class=\"summary-pic\"]//img/@src",
+        "desc": "//p[@class=\"introduce\"]",
+        "lastUpdateDate": "normalize-space(substring-after(//div[@class=\"text-row\"]/span[contains(.,\"更新：\")],\"更新：\"))"
+      },
+      "url": "@dyn:source.helpId"
+    },
+    "sourceDetail": {
+      "forGetMethod": true,
+      "params": {},
+      "parser": {
+        "_1": {
+          "_list": "//div[@class=\"catalog-list\"]//li[a[starts-with(@href,\"/Novel/\") and @title]]",
+          "title": "./a/@title",
+          "url": "./a/@href"
+        },
+        "lastChapterTitle": "(//div[@class=\"catalog-list\"]//li[a[starts-with(@href,\"/Novel/\") and @title]])[last()]/a/@title"
+      }
+    },
+    "chapterDetail": {
+      "forGetMethod": true,
+      "params": {},
+      "parser": {
+        "content": "//div[@id=\"ChapterBody\"]/p"
+      }
+    }
+  }
+]

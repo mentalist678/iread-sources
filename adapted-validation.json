@@ -1,0 +1,94 @@
+[
+  {
+    "source": "16K小说·适配试用20261016",
+    "status": "failed",
+    "searchResults": 20,
+    "error": "HTTP Error 502: Bad Gateway"
+  },
+  {
+    "source": "书坊文学·适配试用20261016",
+    "status": "desktop_passed_ios_pending",
+    "searchResults": 20,
+    "directoryPages": 3,
+    "chapterCount": 292,
+    "samples": [
+      {
+        "title": "【001】一觉回到开服前（求推荐票）",
+        "url": "http://www.sfwx.com/91/91349/406139.html",
+        "pages": 3,
+        "characters": 2487
+      },
+      {
+        "title": "【146】各州的豪强",
+        "url": "http://www.sfwx.com/91/91349/406285.html",
+        "pages": 3,
+        "characters": 1267
+      },
+      {
+        "title": "【289】尾声",
+        "url": "http://www.sfwx.com/91/91349/406432.html",
+        "pages": 1,
+        "characters": 1195
+      }
+    ]
+  },
+  {
+    "source": "星星小说·适配试用20261016",
+    "status": "desktop_passed_ios_pending",
+    "searchResults": 20,
+    "directoryPages": 1,
+    "chapterCount": 28,
+    "samples": [
+      {
+        "title": "第000章 序章",
+        "url": "http://www.xxtxt.com/92/92038/33782.html",
+        "pages": 1,
+        "characters": 160
+      },
+      {
+        "title": "第014章 传国玉玺",
+        "url": "http://www.xxtxt.com/92/92038/33796.html",
+        "pages": 3,
+        "characters": 2682
+      },
+      {
+        "title": "第027章 我为刺史",
+        "url": "http://www.xxtxt.com/92/92038/33809.html",
+        "pages": 3,
+        "characters": 2607
+      }
+    ]
+  },
+  {
+    "source": "大唐小说·适配试用20261016",
+    "status": "desktop_passed_ios_pending",
+    "searchResults": 20,
+    "directoryPages": 2,
+    "chapterCount": 143,
+    "samples": [
+      {
+        "title": "第一章：史上最惨穿越第一人",
+        "url": "https://www.dtxsw.com/97/97821/550145.html",
+        "pages": 3,
+        "characters": 2252
+      },
+      {
+        "title": "第七十章：苏悟道和林清河的交手",
+        "url": "https://www.dtxsw.com/97/97821/550216.html",
+        "pages": 3,
+        "characters": 3148
+      },
+      {
+        "title": "第一百四十三章：好人呐",
+        "url": "https://www.dtxsw.com/97/97821/550287.html",
+        "pages": 1,
+        "characters": 1279
+      }
+    ]
+  },
+  {
+    "source": "天地中文公开章节·适配试用20261016",
+    "status": "failed",
+    "error": "timed out"
+  }
+]

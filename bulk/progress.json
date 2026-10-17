@@ -1,8 +1,8 @@
 {
   "baselineCommit": "033319b7b778f467059088da1e7340f38c32c9eb",
   "baseline": 217,
-  "current": 527,
-  "newlyTranslated": 311,
+  "current": 539,
+  "newlyTranslated": 323,
   "withheld": 1,
   "newIds": [
     "main-0005",
@@ -10,11 +10,13 @@
     "main-0013",
     "main-0014",
     "main-0015",
+    "main-0019",
     "main-0024",
     "main-0027",
     "main-0028",
     "main-0032",
     "main-0035",
+    "main-0036",
     "main-0042",
     "main-0043",
     "main-0059",
@@ -44,7 +46,10 @@
     "main-0144",
     "main-0145",
     "main-0148",
+    "main-0151",
     "main-0152",
+    "main-0155",
+    "main-0156",
     "main-0163",
     "main-0167",
     "main-0168",
@@ -94,11 +99,13 @@
     "main-0337",
     "main-0338",
     "main-0340",
+    "main-0344",
     "main-0346",
     "main-0348",
     "main-0363",
     "main-0365",
     "main-0368",
+    "main-0371",
     "main-0372",
     "main-0384",
     "main-0390",
@@ -131,6 +138,8 @@
     "main-0451",
     "main-0452",
     "main-0453",
+    "main-0458",
+    "main-0461",
     "main-0462",
     "main-0464",
     "main-0487",
@@ -227,6 +236,8 @@
     "main-0820",
     "main-0821",
     "main-0822",
+    "main-0825",
+    "main-0826",
     "main-0828",
     "main-0830",
     "main-0831",
@@ -308,6 +319,7 @@
     "selected-0144",
     "selected-0145",
     "selected-0150",
+    "selected-0154",
     "selected-0156",
     "selected-0160",
     "selected-0164",
@@ -332,7 +344,7 @@
   "remainingByPriority": {
     "1": 38,
     "2": 19,
-    "3": 85,
+    "3": 73,
     "4": 525
   },
   "remaining": [
@@ -863,7 +875,6 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
-        "request: dynamic request logic",
         "directory URL: dynamic directory request"
       ],
       "priority": 4
@@ -1059,7 +1070,6 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
-        "request: dynamic request logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -1762,19 +1772,6 @@
       "priority": 4
     },
     {
-      "id": "selected-0154",
-      "name": "QQ阅读",
-      "homeUrl": "https://book.qq.com/",
-      "warnings": [
-        "login features not ported; public access only"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "request: dynamic request logic"
-      ],
-      "priority": 3
-    },
-    {
       "id": "selected-0155",
       "name": "盒子游戏",
       "homeUrl": "https://h.4399.com",
@@ -1800,8 +1797,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: JSON query needs filter/recursive mapping",
         "chapterUrl: URL template combines multiple JSON fields",
-        "body: JSON query needs filter/recursive mapping",
-        "request: dynamic request logic"
+        "body: JSON query needs filter/recursive mapping"
       ],
       "priority": 4
     },
@@ -1908,8 +1904,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "chapterTitle: runtime JavaScript or variable dependency",
         "chapterUrl: missing rule",
-        "body: runtime JavaScript or variable dependency",
-        "request: dynamic request logic"
+        "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -2121,7 +2116,6 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
-        "request: dynamic request logic",
         "directory URL: dynamic directory request",
         "book initialization: runtime JavaScript or variable dependency",
         "dynamic or invalid headers"
@@ -2199,8 +2193,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: JSON query needs filter/recursive mapping",
         "chapterUrl: URL template combines multiple JSON fields",
-        "body: JSON query needs filter/recursive mapping",
-        "request: dynamic request logic"
+        "body: JSON query needs filter/recursive mapping"
       ],
       "priority": 4
     },
@@ -2286,17 +2279,6 @@
         "embedded credential header requires review"
       ],
       "priority": 4
-    },
-    {
-      "id": "main-0019",
-      "name": "中华典藏",
-      "homeUrl": "https://www.diancang.xyz",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "request: dynamic request logic"
-      ],
-      "priority": 3
     },
     {
       "id": "main-0020",
@@ -2429,17 +2411,6 @@
       "priority": 4
     },
     {
-      "id": "main-0036",
-      "name": "中华典藏",
-      "homeUrl": "https://www.diancang.xyz#🎃",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "request: dynamic request logic"
-      ],
-      "priority": 3
-    },
-    {
       "id": "main-0037",
       "name": "息壤中文",
       "homeUrl": "https://android-api.xrzww.com/",
@@ -2468,7 +2439,6 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
-        "request: dynamic request logic",
         "directory URL: dynamic directory request",
         "book initialization: runtime JavaScript or variable dependency",
         "dynamic or invalid headers"
@@ -2645,8 +2615,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: JSON query needs filter/recursive mapping",
         "chapterUrl: URL template combines multiple JSON fields",
-        "body: JSON query needs filter/recursive mapping",
-        "request: dynamic request logic"
+        "body: JSON query needs filter/recursive mapping"
       ],
       "priority": 4
     },
@@ -2661,8 +2630,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: JSON query needs filter/recursive mapping",
         "chapterUrl: URL template combines multiple JSON fields",
-        "body: JSON query needs filter/recursive mapping",
-        "request: dynamic request logic"
+        "body: JSON query needs filter/recursive mapping"
       ],
       "priority": 4
     },
@@ -3329,39 +3297,6 @@
         "body: ordered combination requires adaptation"
       ],
       "priority": 1
-    },
-    {
-      "id": "main-0151",
-      "name": "同人圈子",
-      "homeUrl": "http://www.tongrenquan.org/#",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "request: request options contain expressions rather than literal data"
-      ],
-      "priority": 3
-    },
-    {
-      "id": "main-0155",
-      "name": "同人小说",
-      "homeUrl": "http://www.trxs.org/##@",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "request: dynamic request logic"
-      ],
-      "priority": 3
-    },
-    {
-      "id": "main-0156",
-      "name": "同人小说",
-      "homeUrl": "http://www.trxs.org/",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "request: dynamic request logic"
-      ],
-      "priority": 3
     },
     {
       "id": "main-0158",
@@ -4327,8 +4262,7 @@
       "reasons": [
         "chapterTitle: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
-        "body: runtime JavaScript or variable dependency",
-        "request: dynamic request logic"
+        "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -4665,17 +4599,6 @@
       "priority": 4
     },
     {
-      "id": "main-0344",
-      "name": "爱奇艺",
-      "homeUrl": "https://wenxue.iqiyi.com/",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "request: dynamic request logic"
-      ],
-      "priority": 3
-    },
-    {
       "id": "main-0345",
       "name": "爱小说网",
       "homeUrl": "http://www.18ys.net",
@@ -4719,8 +4642,7 @@
       "reasons": [
         "chapterTitle: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
-        "body: runtime JavaScript or variable dependency",
-        "request: dynamic request logic"
+        "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4
     },
@@ -4833,17 +4755,6 @@
         "body pagination: first-only regex replacement needs adaptation"
       ],
       "priority": 4
-    },
-    {
-      "id": "main-0371",
-      "name": "精品小说网",
-      "homeUrl": "http://www.uu.net",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "request: dynamic request logic"
-      ],
-      "priority": 3
     },
     {
       "id": "main-0374",
@@ -5376,17 +5287,6 @@
       "priority": 1
     },
     {
-      "id": "main-0458",
-      "name": "爱小说网",
-      "homeUrl": "http://www.uu234.net",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "request: dynamic request logic"
-      ],
-      "priority": 3
-    },
-    {
       "id": "main-0459",
       "name": "神凑轻小说文库",
       "homeUrl": "https://m.shencou.com/",
@@ -5406,23 +5306,11 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: runtime JavaScript or variable dependency",
-        "request: dynamic request logic",
         "directory pagination selects all options; next-page semantics require adaptation",
         "body pagination: runtime JavaScript or variable dependency",
         "dynamic or invalid headers"
       ],
       "priority": 4
-    },
-    {
-      "id": "main-0461",
-      "name": "醋小说网",
-      "homeUrl": "http://www.uu234.net/",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "request: dynamic request logic"
-      ],
-      "priority": 3
     },
     {
       "id": "main-0465",
@@ -6148,7 +6036,6 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
-        "request: dynamic request logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -8220,28 +8107,6 @@
       "priority": 4
     },
     {
-      "id": "main-0825",
-      "name": "华丽家族",
-      "homeUrl": "https://www.hljzc.cc/",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "request: dynamic request logic"
-      ],
-      "priority": 3
-    },
-    {
-      "id": "main-0826",
-      "name": "华丽家族",
-      "homeUrl": "https://www.hljzc.cc#🎃",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "request: dynamic request logic"
-      ],
-      "priority": 3
-    },
-    {
       "id": "main-0827",
       "name": "卡提諾論壇",
       "homeUrl": "https://ck101.com/",
@@ -8285,7 +8150,6 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
-        "request: dynamic request logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
       "priority": 4
@@ -9024,7 +8888,6 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "request: dynamic request logic",
         "directory pagination selects all options; next-page semantics require adaptation",
         "body pagination: runtime JavaScript or variable dependency",
         "dynamic or invalid headers"
@@ -9382,7 +9245,7 @@
     }
   ],
   "validation": {
-    "behaviorTests": 16,
+    "behaviorTests": 17,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false

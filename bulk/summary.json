@@ -1,10 +1,10 @@
 {
   "processed": 1194,
-  "converted": 624,
+  "converted": 625,
   "statuses": {
     "native_adaptation_reused": 19,
-    "statically_translated_unverified": 605,
-    "manual_adaptation_required": 570
+    "statically_translated_unverified": 606,
+    "manual_adaptation_required": 569
   },
   "duplicatesPreserved": true,
   "liveVerification": false,
@@ -22,5 +22,5 @@
       "count": 1000
     }
   ],
-  "checkedAt": "2026-10-18T11:31:37.750243+00:00"
+  "checkedAt": "2026-10-18T11:35:55.108917+00:00"
 }

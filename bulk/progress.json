@@ -1,8 +1,8 @@
 {
   "baselineCommit": "033319b7b778f467059088da1e7340f38c32c9eb",
   "baseline": 217,
-  "current": 624,
-  "newlyTranslated": 408,
+  "current": 625,
+  "newlyTranslated": 409,
   "withheld": 1,
   "newIds": [
     "main-0005",
@@ -331,6 +331,7 @@
     "main-0913",
     "main-0916",
     "main-0917",
+    "main-0920",
     "main-0922",
     "main-0924",
     "main-0925",
@@ -429,7 +430,7 @@
   "remainingByPriority": {
     "1": 52,
     "2": 6,
-    "3": 60,
+    "3": 59,
     "4": 452
   },
   "remaining": [
@@ -9843,20 +9844,6 @@
       ]
     },
     {
-      "id": "main-0920",
-      "name": "笔下文学",
-      "homeUrl": "https://www.bxwxco.com#🎃",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "request: request options contain expressions rather than literal data"
-      ],
-      "priority": 3,
-      "resolutionPlan": [
-        "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
-      ]
-    },
-    {
       "id": "main-0921",
       "name": "全本小说",
       "homeUrl": "http://www.apap.net#🎃",
@@ -10399,7 +10386,7 @@
     }
   ],
   "validation": {
-    "behaviorTests": 62,
+    "behaviorTests": 63,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false

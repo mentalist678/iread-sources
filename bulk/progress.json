@@ -1,8 +1,8 @@
 {
   "baselineCommit": "033319b7b778f467059088da1e7340f38c32c9eb",
   "baseline": 217,
-  "current": 619,
-  "newlyTranslated": 403,
+  "current": 621,
+  "newlyTranslated": 405,
   "withheld": 1,
   "newIds": [
     "main-0005",
@@ -146,6 +146,7 @@
     "main-0394",
     "main-0395",
     "main-0396",
+    "main-0398",
     "main-0399",
     "main-0401",
     "main-0402",
@@ -385,6 +386,7 @@
     "selected-0086",
     "selected-0096",
     "selected-0097",
+    "selected-0103",
     "selected-0108",
     "selected-0113",
     "selected-0116",
@@ -422,7 +424,7 @@
     }
   ],
   "remainingByPriority": {
-    "1": 52,
+    "1": 50,
     "2": 6,
     "3": 60,
     "4": 457
@@ -976,14 +978,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: runtime JavaScript or variable dependency",
-        "chapterList: list rule returns text or attribute",
         "chapterTitle: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -1592,22 +1592,6 @@
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
-      ]
-    },
-    {
-      "id": "selected-0103",
-      "name": "風月文學網",
-      "homeUrl": "http://www.h528.com",
-      "warnings": [
-        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterList: list rule returns text or attribute"
-      ],
-      "priority": 1,
-      "resolutionPlan": [
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
       ]
     },
     {
@@ -3968,14 +3952,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: runtime JavaScript or variable dependency",
-        "chapterList: list rule returns text or attribute",
         "chapterTitle: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -3989,14 +3971,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: runtime JavaScript or variable dependency",
-        "chapterList: list rule returns text or attribute",
         "chapterTitle: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -5597,22 +5577,6 @@
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
-      ]
-    },
-    {
-      "id": "main-0398",
-      "name": "風月文學网",
-      "homeUrl": "http://www.h528.com",
-      "warnings": [
-        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterList: list rule returns text or attribute"
-      ],
-      "priority": 1,
-      "resolutionPlan": [
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
       ]
     },
     {
@@ -9539,13 +9503,11 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: list rule returns text or attribute",
         "body: runtime JavaScript or variable dependency",
         "request: requires WebView"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "检查是否存在等价静态公开请求；依赖页面运行环境的链路保留为专门适配。"
       ]
@@ -10497,7 +10459,7 @@
     }
   ],
   "validation": {
-    "behaviorTests": 48,
+    "behaviorTests": 49,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false

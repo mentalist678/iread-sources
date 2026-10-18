@@ -1,8 +1,8 @@
 {
   "baselineCommit": "033319b7b778f467059088da1e7340f38c32c9eb",
   "baseline": 217,
-  "current": 608,
-  "newlyTranslated": 392,
+  "current": 610,
+  "newlyTranslated": 394,
   "withheld": 1,
   "newIds": [
     "main-0005",
@@ -42,6 +42,8 @@
     "main-0102",
     "main-0105",
     "main-0109",
+    "main-0110",
+    "main-0111",
     "main-0116",
     "main-0117",
     "main-0118",
@@ -411,10 +413,10 @@
     }
   ],
   "remainingByPriority": {
-    "1": 45,
+    "1": 49,
     "2": 6,
     "3": 60,
-    "4": 475
+    "4": 469
   },
   "remaining": [
     {
@@ -1495,14 +1497,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency",
-        "chapterUrl: missing rule",
-        "body: unsupported selector: :not(.mw-parser-output > h2:nth-of-type(2) ~ p)"
+        "chapterUrl: missing rule"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。",
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
+        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
       ]
     },
     {
@@ -2468,14 +2468,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterList: unsupported selector: :(?s)(\\d+)\" class=\"(isvip)?[^\"]*name[^>]*>([^<]*)",
-        "chapterTitle: JSON query needs filter/recursive mapping",
-        "body: runtime JavaScript or variable dependency"
+        "chapterTitle: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
-        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
+        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
     },
     {
@@ -2502,11 +2500,11 @@
       "name": "番茄小说",
       "homeUrl": "https://www.fanqienovel.com",
       "warnings": [
+        "bare JSON paths inferred from explicit JSON field templates and shared envelope; response format unverified",
         "login features not ported; public access only"
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: unsupported selector: [*]",
         "bookName: runtime JavaScript or variable dependency",
         "bookUrl: JSON query needs filter/recursive mapping",
         "chapterList: runtime JavaScript or variable dependency",
@@ -2517,7 +2515,6 @@
       ],
       "priority": 4,
       "resolutionPlan": [
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
@@ -2863,11 +2860,11 @@
       "name": "番茄小说",
       "homeUrl": "https://www.fanqienovel.com",
       "warnings": [
+        "bare JSON paths inferred from explicit JSON field templates and shared envelope; response format unverified",
         "login features not ported; public access only"
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: unsupported selector: [*]",
         "bookName: runtime JavaScript or variable dependency",
         "bookUrl: JSON query needs filter/recursive mapping",
         "chapterList: runtime JavaScript or variable dependency",
@@ -2878,7 +2875,6 @@
       ],
       "priority": 4,
       "resolutionPlan": [
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
@@ -3006,14 +3002,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency",
-        "chapterUrl: missing rule",
-        "body: unsupported selector: :not(.mw-parser-output > h2:nth-of-type(2) ~ p)"
+        "chapterUrl: missing rule"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。",
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
+        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
       ]
     },
     {
@@ -3288,18 +3282,17 @@
       "id": "main-0079",
       "name": "优书书小说网",
       "homeUrl": "http://www.shushun.cc#🎃",
-      "warnings": [],
+      "warnings": [
+        "search URL alias in name expanded within the current search row; other variable consumers not migrated"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookName: runtime JavaScript or variable dependency",
-        "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: unsupported selector: :<dd",
         "chapterTitle: JSON query needs filter/recursive mapping",
         "chapterUrl: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
@@ -3544,42 +3537,6 @@
       ]
     },
     {
-      "id": "main-0110",
-      "name": "腾讯阅读",
-      "homeUrl": "https://book.qq.com#🎃",
-      "warnings": [
-        "login features not ported; public access only"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "searchList: unsupported selector: [*]",
-        "bookUrl: regex replacement capture syntax needs adaptation"
-      ],
-      "priority": 1,
-      "resolutionPlan": [
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
-        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
-      ]
-    },
-    {
-      "id": "main-0111",
-      "name": "腾讯阅读",
-      "homeUrl": "https://book.qq.com/",
-      "warnings": [
-        "login features not ported; public access only"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "searchList: unsupported selector: [*]",
-        "bookUrl: regex replacement capture syntax needs adaptation"
-      ],
-      "priority": 1,
-      "resolutionPlan": [
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
-        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
-      ]
-    },
-    {
       "id": "main-0112",
       "name": "若初网优视",
       "homeUrl": "http://www.ruochu.com#yc1101",
@@ -3656,8 +3613,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterTitle: runtime JavaScript or variable dependency",
-        "chapterUrl: runtime JavaScript or variable dependency",
-        "body: runtime JavaScript or variable dependency"
+        "chapterUrl: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
@@ -3668,9 +3624,7 @@
       "id": "main-0125",
       "name": "一百零一",
       "homeUrl": "https://www.txtxs101.com#🎃",
-      "warnings": [
-        "original content replacement not ported; advertisements may remain"
-      ],
+      "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: runtime JavaScript or variable dependency",
@@ -4938,22 +4892,20 @@
       "name": "腾讯阅读",
       "homeUrl": "https://ubook.reader.qq.com/##闫",
       "warnings": [
+        "bare JSON paths inferred from explicit JSON field templates and shared envelope; response format unverified",
         "login features not ported; public access only"
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: unsupported selector: [*]",
-        "bookUrl: regex replacement capture syntax needs adaptation",
         "chapterList: JSON query needs filter/recursive mapping",
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: regex replacement capture syntax needs adaptation"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
-        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
+        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
       ]
     },
     {
@@ -5728,14 +5680,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency",
-        "chapterUrl: missing rule",
-        "body: unsupported selector: :not(.mw-parser-output > h2:nth-of-type(2) ~ p)"
+        "chapterUrl: missing rule"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。",
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
+        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
       ]
     },
     {
@@ -5810,11 +5760,11 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "body: runtime JavaScript or variable dependency"
+        "body: script replacement capture requires adaptation"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
+        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
       ]
     },
     {
@@ -6880,11 +6830,11 @@
       "id": "main-0537",
       "name": "优精彩东方文学",
       "homeUrl": "https://m.jcdf99.com",
-      "warnings": [],
+      "warnings": [
+        "search URL alias in name expanded within the current search row; other variable consumers not migrated"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookName: runtime JavaScript or variable dependency",
-        "bookUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: ordered combination requires adaptation"
@@ -6900,11 +6850,11 @@
       "id": "main-0538",
       "name": "优精彩东方文学",
       "homeUrl": "https://m.jcdf99.com#🎃",
-      "warnings": [],
+      "warnings": [
+        "search URL alias in name expanded within the current search row; other variable consumers not migrated"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookName: runtime JavaScript or variable dependency",
-        "bookUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: ordered combination requires adaptation"
@@ -9150,8 +9100,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterTitle: runtime JavaScript or variable dependency",
-        "chapterUrl: runtime JavaScript or variable dependency",
-        "body: runtime JavaScript or variable dependency"
+        "chapterUrl: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
@@ -9168,8 +9117,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterTitle: runtime JavaScript or variable dependency",
-        "chapterUrl: runtime JavaScript or variable dependency",
-        "body: runtime JavaScript or variable dependency"
+        "chapterUrl: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
@@ -9500,10 +9448,11 @@
       "id": "main-0852",
       "name": "无限小说网",
       "homeUrl": "https://wuxianbook.com#🎃",
-      "warnings": [],
+      "warnings": [
+        "bare JSON paths inferred from explicit JSON field templates and shared envelope; response format unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: unsupported selector: [*]",
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency",
@@ -9511,7 +9460,6 @@
       ],
       "priority": 4,
       "resolutionPlan": [
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -9793,18 +9741,17 @@
       "id": "main-0889",
       "name": "书书小说",
       "homeUrl": "http://www.shushun.cc",
-      "warnings": [],
+      "warnings": [
+        "search URL alias in name expanded within the current search row; other variable consumers not migrated"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookName: runtime JavaScript or variable dependency",
-        "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: unsupported selector: :<dd",
         "chapterTitle: JSON query needs filter/recursive mapping",
         "chapterUrl: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
@@ -10257,16 +10204,15 @@
       "id": "main-0945",
       "name": "书盟",
       "homeUrl": "http://www.u33.me",
-      "warnings": [],
+      "warnings": [
+        "search URL alias in name expanded within the current search row; other variable consumers not migrated"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookName: runtime JavaScript or variable dependency",
-        "bookUrl: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
     },
@@ -10389,14 +10335,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterList: unsupported selector: :(?s)(\\d+)\" class=\"(isvip)?[^\"]*name[^>]*>([^<]*)",
-        "chapterTitle: JSON query needs filter/recursive mapping",
-        "body: runtime JavaScript or variable dependency"
+        "chapterTitle: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
-        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
+        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
     },
     {
@@ -10407,14 +10351,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterList: unsupported selector: :(?s)(\\d+)\" class=\"(isvip)?[^\"]*name[^>]*>([^<]*)",
-        "chapterTitle: JSON query needs filter/recursive mapping",
-        "body: runtime JavaScript or variable dependency"
+        "chapterTitle: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
-        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
+        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
     },
     {
@@ -10667,12 +10609,12 @@
     }
   ],
   "validation": {
-    "behaviorTests": 41,
+    "behaviorTests": 44,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false
   },
-  "jsonConfigCount": 5,
+  "jsonConfigCount": 7,
   "jsonThreePhaseCount": 3,
   "references": [
     "https://jxd524.github.io/2018/11/14/bookConfigs/",

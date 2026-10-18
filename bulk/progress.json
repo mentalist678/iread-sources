@@ -1,8 +1,8 @@
 {
   "baselineCommit": "033319b7b778f467059088da1e7340f38c32c9eb",
   "baseline": 217,
-  "current": 599,
-  "newlyTranslated": 383,
+  "current": 605,
+  "newlyTranslated": 389,
   "withheld": 1,
   "newIds": [
     "main-0005",
@@ -43,6 +43,7 @@
     "main-0109",
     "main-0116",
     "main-0117",
+    "main-0118",
     "main-0119",
     "main-0122",
     "main-0127",
@@ -121,6 +122,8 @@
     "main-0346",
     "main-0348",
     "main-0351",
+    "main-0353",
+    "main-0354",
     "main-0358",
     "main-0363",
     "main-0365",
@@ -174,6 +177,7 @@
     "main-0495",
     "main-0496",
     "main-0497",
+    "main-0498",
     "main-0501",
     "main-0504",
     "main-0506",
@@ -208,6 +212,7 @@
     "main-0584",
     "main-0585",
     "main-0590",
+    "main-0592",
     "main-0595",
     "main-0600",
     "main-0615",
@@ -364,6 +369,7 @@
     "selected-0075",
     "selected-0080",
     "selected-0085",
+    "selected-0086",
     "selected-0096",
     "selected-0097",
     "selected-0108",
@@ -403,9 +409,9 @@
   ],
   "remainingByPriority": {
     "1": 46,
-    "2": 5,
+    "2": 6,
     "3": 60,
-    "4": 484
+    "4": 477
   },
   "remaining": [
     {
@@ -509,12 +515,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterUrl: runtime JavaScript or variable dependency",
-        "directory URL: runtime JavaScript or variable dependency"
+        "directory URL: capture boundary is not literal"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
       ]
     },
     {
@@ -1363,20 +1369,6 @@
       ]
     },
     {
-      "id": "selected-0086",
-      "name": "天下书盟",
-      "homeUrl": "http://www.fbook.net",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "directory URL: runtime JavaScript or variable dependency"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
-      ]
-    },
-    {
       "id": "selected-0087",
       "name": "海棠书屋",
       "homeUrl": "http://m.jmshuwu.net",
@@ -1998,7 +1990,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterUrl: runtime JavaScript or variable dependency",
-        "directory URL: runtime JavaScript or variable dependency"
+        "directory URL: directory address has unsupported template suffix"
       ],
       "priority": 4,
       "resolutionPlan": [
@@ -3443,17 +3435,16 @@
       "name": "吾爱破解",
       "homeUrl": "https://www.52pojie.cn#🎃",
       "warnings": [
+        "directory address derived from native source.dirURL using fixed transformations; redirect behavior unverified",
         "login features not ported; public access only"
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "body: runtime JavaScript or variable dependency",
-        "directory URL: runtime JavaScript or variable dependency"
+        "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -3651,23 +3642,6 @@
       ]
     },
     {
-      "id": "main-0118",
-      "name": "铁血读书",
-      "homeUrl": "http://book.tiexue.net#一程",
-      "warnings": [
-        "next-chapter link excluded from body pagination to preserve chapter boundaries",
-        "login features not ported; public access only"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "directory URL: runtime JavaScript or variable dependency"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
-      ]
-    },
-    {
       "id": "main-0123",
       "name": "黑岩小说",
       "homeUrl": "https://www.heiyan.com#🎃",
@@ -3730,12 +3704,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterUrl: runtime JavaScript or variable dependency",
-        "directory URL: runtime JavaScript or variable dependency"
+        "directory URL: capture boundary is not literal"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
       ]
     },
     {
@@ -3903,17 +3877,16 @@
       "name": "吾爱破解",
       "homeUrl": "https://www.52pojie.cn",
       "warnings": [
+        "directory address derived from native source.dirURL using fixed transformations; redirect behavior unverified",
         "login features not ported; public access only"
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "body: runtime JavaScript or variable dependency",
-        "directory URL: runtime JavaScript or variable dependency"
+        "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -3953,19 +3926,18 @@
       "name": "太极书吧",
       "homeUrl": "https://69shux.co",
       "warnings": [
+        "directory address derived from native source.dirURL using fixed transformations; redirect behavior unverified",
         "original content replacement not ported; advertisements may remain"
       ],
       "status": "manual_adaptation_required",
       "reasons": [
         "bookName: runtime JavaScript or variable dependency",
         "chapterTitle: runtime JavaScript or variable dependency",
-        "body: runtime JavaScript or variable dependency",
-        "directory URL: runtime JavaScript or variable dependency"
+        "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -4709,13 +4681,14 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
         "request: dynamic request logic",
-        "directory URL: runtime JavaScript or variable dependency",
+        "directory URL: script replacement capture requires adaptation",
         "book initialization: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
+        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
     },
@@ -5448,38 +5421,6 @@
       ]
     },
     {
-      "id": "main-0353",
-      "name": "秋田书屋",
-      "homeUrl": "https://m.qiutiandog.com/##@鱼",
-      "warnings": [
-        "directory pagination requires selected option marker; no marker stops pagination"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "directory URL: runtime JavaScript or variable dependency"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
-      ]
-    },
-    {
-      "id": "main-0354",
-      "name": "秋田书屋",
-      "homeUrl": "https://m.qiutiandog.com/",
-      "warnings": [
-        "directory pagination requires selected option marker; no marker stops pagination"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "directory URL: runtime JavaScript or variable dependency"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
-      ]
-    },
-    {
       "id": "main-0355",
       "name": "移动阅读出版",
       "homeUrl": "http://m.ndlib.cn",
@@ -5947,16 +5888,16 @@
       "id": "main-0422",
       "name": "米妮小说网",
       "homeUrl": "https://www.minixiaoshuow.com/",
-      "warnings": [],
+      "warnings": [
+        "directory address derived from native source.dirURL using fixed transformations; redirect behavior unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "body: runtime JavaScript or variable dependency",
-        "directory URL: runtime JavaScript or variable dependency"
+        "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -6682,20 +6623,6 @@
       ]
     },
     {
-      "id": "main-0498",
-      "name": "天下书盟",
-      "homeUrl": "http://www.fbook.net#",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "directory URL: runtime JavaScript or variable dependency"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
-      ]
-    },
-    {
       "id": "main-0499",
       "name": "御宅文",
       "homeUrl": "https://www.yuzhaiwen.com#🎃",
@@ -7073,6 +7000,7 @@
       "name": "太极书吧",
       "homeUrl": "https://69shux.co/#",
       "warnings": [
+        "directory address derived from native source.dirURL using fixed transformations; redirect behavior unverified",
         "login features not ported; public access only"
       ],
       "status": "manual_adaptation_required",
@@ -7080,7 +7008,6 @@
         "bookName: runtime JavaScript or variable dependency",
         "chapterTitle: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
-        "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
@@ -7103,7 +7030,7 @@
         "chapterTitle: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic",
-        "directory URL: runtime JavaScript or variable dependency"
+        "directory URL: script replacement contains runtime logic"
       ],
       "priority": 4,
       "resolutionPlan": [
@@ -7337,20 +7264,6 @@
       "priority": 4,
       "resolutionPlan": [
         "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
-      ]
-    },
-    {
-      "id": "main-0592",
-      "name": "沧元图小说",
-      "homeUrl": "https://www.09read.com#🎃",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "directory URL: runtime JavaScript or variable dependency"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
     },
     {
@@ -8730,7 +8643,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "bookUrl: runtime JavaScript or variable dependency",
-        "directory URL: runtime JavaScript or variable dependency",
+        "directory URL: directory address has unsupported template suffix",
         "directory initialization requires manual adaptation"
       ],
       "priority": 4,
@@ -8986,14 +8899,12 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "body: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic",
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
@@ -9063,7 +8974,6 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: descending or length-dependent collection interval",
-        "body: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic",
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
@@ -9071,7 +8981,6 @@
       "priority": 4,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
@@ -9537,11 +9446,11 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "directory URL: runtime JavaScript or variable dependency"
+        "directory URL: regex replacement capture syntax needs adaptation"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
       ]
     },
     {
@@ -9838,7 +9747,6 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: descending or length-dependent collection interval",
-        "body: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic",
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
@@ -9846,7 +9754,6 @@
       "priority": 4,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
@@ -9964,14 +9871,12 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "body: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic",
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
@@ -10199,13 +10104,13 @@
       "name": "谷歌小说网",
       "homeUrl": "http://www.gugehk.org",
       "warnings": [
+        "directory address derived from native source.dirURL using fixed transformations; redirect behavior unverified",
         "directory pagination requires selected option marker; no marker stops pagination",
         "original content replacement not ported; advertisements may remain"
       ],
       "status": "manual_adaptation_required",
       "reasons": [
         "request: request options contain expressions rather than literal data",
-        "directory URL: runtime JavaScript or variable dependency",
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
@@ -10221,13 +10126,13 @@
       "name": "谷歌小说网",
       "homeUrl": "http://www.gugehk.org#🎃",
       "warnings": [
+        "directory address derived from native source.dirURL using fixed transformations; redirect behavior unverified",
         "directory pagination requires selected option marker; no marker stops pagination",
         "original content replacement not ported; advertisements may remain"
       ],
       "status": "manual_adaptation_required",
       "reasons": [
         "request: request options contain expressions rather than literal data",
-        "directory URL: runtime JavaScript or variable dependency",
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
@@ -10608,7 +10513,7 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "directory URL: runtime JavaScript or variable dependency",
+        "directory URL: directory address has unsupported template suffix",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
@@ -10799,7 +10704,7 @@
     }
   ],
   "validation": {
-    "behaviorTests": 38,
+    "behaviorTests": 39,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false

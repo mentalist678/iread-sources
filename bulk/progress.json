@@ -1,8 +1,8 @@
 {
   "baselineCommit": "033319b7b778f467059088da1e7340f38c32c9eb",
   "baseline": 217,
-  "current": 598,
-  "newlyTranslated": 382,
+  "current": 599,
+  "newlyTranslated": 383,
   "withheld": 1,
   "newIds": [
     "main-0005",
@@ -341,6 +341,7 @@
     "main-0989",
     "main-0990",
     "main-0994",
+    "main-0995",
     "main-0996",
     "main-0999",
     "selected-0002",
@@ -401,7 +402,7 @@
     }
   ],
   "remainingByPriority": {
-    "1": 47,
+    "1": 46,
     "2": 5,
     "3": 60,
     "4": 484
@@ -10410,14 +10411,13 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: capture boundary is not literal",
         "request: dynamic request logic",
         "directory pagination: capture boundary is not literal"
       ],
       "priority": 3,
       "resolutionPlan": [
-        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
-        "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
+        "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
+        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
       ]
     },
     {
@@ -10747,20 +10747,6 @@
       ]
     },
     {
-      "id": "main-0995",
-      "name": "云轩阁",
-      "homeUrl": "http://www.yunxuange.cc#🎃",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "bookUrl: capture boundary is not literal"
-      ],
-      "priority": 1,
-      "resolutionPlan": [
-        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
-      ]
-    },
-    {
       "id": "main-0997",
       "name": "优优",
       "homeUrl": "https://m.yoyowx.com#🎃",
@@ -10813,7 +10799,7 @@
     }
   ],
   "validation": {
-    "behaviorTests": 37,
+    "behaviorTests": 38,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false

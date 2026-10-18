@@ -1,8 +1,8 @@
 {
   "baselineCommit": "033319b7b778f467059088da1e7340f38c32c9eb",
   "baseline": 217,
-  "current": 618,
-  "newlyTranslated": 402,
+  "current": 619,
+  "newlyTranslated": 403,
   "withheld": 1,
   "newIds": [
     "main-0005",
@@ -255,6 +255,7 @@
     "main-0697",
     "main-0704",
     "main-0709",
+    "main-0712",
     "main-0713",
     "main-0714",
     "main-0720",
@@ -421,7 +422,7 @@
     }
   ],
   "remainingByPriority": {
-    "1": 53,
+    "1": 52,
     "2": 6,
     "3": 60,
     "4": 457
@@ -8230,21 +8231,6 @@
       ]
     },
     {
-      "id": "main-0712",
-      "name": "飘天文学",
-      "homeUrl": "https://m.ptwxz.org#🎃",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "bookName: unsupported selector: /a/p[1]/text()",
-        "bookUrl: unsupported selector: /a/"
-      ],
-      "priority": 1,
-      "resolutionPlan": [
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
-      ]
-    },
-    {
       "id": "main-0715",
       "name": "平板电子书",
       "homeUrl": "http://www.qiuyelou.co",
@@ -10511,7 +10497,7 @@
     }
   ],
   "validation": {
-    "behaviorTests": 47,
+    "behaviorTests": 48,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false

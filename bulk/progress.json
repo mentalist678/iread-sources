@@ -1,8 +1,8 @@
 {
   "baselineCommit": "033319b7b778f467059088da1e7340f38c32c9eb",
   "baseline": 217,
-  "current": 610,
-  "newlyTranslated": 394,
+  "current": 618,
+  "newlyTranslated": 402,
   "withheld": 1,
   "newIds": [
     "main-0005",
@@ -39,6 +39,7 @@
     "main-0095",
     "main-0096",
     "main-0097",
+    "main-0100",
     "main-0102",
     "main-0105",
     "main-0109",
@@ -51,6 +52,7 @@
     "main-0122",
     "main-0127",
     "main-0128",
+    "main-0131",
     "main-0135",
     "main-0137",
     "main-0139",
@@ -151,6 +153,7 @@
     "main-0407",
     "main-0408",
     "main-0409",
+    "main-0411",
     "main-0416",
     "main-0417",
     "main-0418",
@@ -176,6 +179,7 @@
     "main-0461",
     "main-0462",
     "main-0464",
+    "main-0485",
     "main-0487",
     "main-0495",
     "main-0496",
@@ -246,6 +250,7 @@
     "main-0684",
     "main-0685",
     "main-0686",
+    "main-0688",
     "main-0691",
     "main-0697",
     "main-0704",
@@ -303,12 +308,14 @@
     "main-0849",
     "main-0850",
     "main-0856",
+    "main-0863",
     "main-0871",
     "main-0873",
     "main-0875",
     "main-0880",
     "main-0882",
     "main-0885",
+    "main-0886",
     "main-0891",
     "main-0893",
     "main-0902",
@@ -381,6 +388,7 @@
     "selected-0113",
     "selected-0116",
     "selected-0128",
+    "selected-0131",
     "selected-0139",
     "selected-0140",
     "selected-0142",
@@ -413,10 +421,10 @@
     }
   ],
   "remainingByPriority": {
-    "1": 49,
+    "1": 53,
     "2": 6,
     "3": 60,
-    "4": 469
+    "4": 457
   },
   "remaining": [
     {
@@ -656,14 +664,13 @@
         "searchList: runtime JavaScript or variable dependency",
         "bookName: runtime JavaScript or variable dependency",
         "chapterList: runtime JavaScript or variable dependency",
-        "chapterUrl: missing rule",
+        "chapterUrl: empty chapter URL fallback requires pagination or volume context mapping",
         "body: runtime JavaScript or variable dependency",
         "directory initialization requires manual adaptation"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
     },
@@ -758,12 +765,13 @@
       "id": "selected-0036",
       "name": "海词精选",
       "homeUrl": "http://dict.cn",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "bookName: runtime JavaScript or variable dependency",
-        "bookUrl: missing rule",
-        "chapterUrl: missing rule"
+        "bookUrl: missing rule"
       ],
       "priority": 4,
       "resolutionPlan": [
@@ -961,6 +969,7 @@
       "name": "民间故事",
       "homeUrl": "https://www.6mj.com",
       "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified",
         "original content replacement not ported; advertisements may remain"
       ],
       "status": "manual_adaptation_required",
@@ -968,14 +977,12 @@
         "searchList: runtime JavaScript or variable dependency",
         "chapterList: list rule returns text or attribute",
         "chapterTitle: runtime JavaScript or variable dependency",
-        "chapterUrl: missing rule",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
+        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
       ]
     },
     {
@@ -1147,18 +1154,18 @@
       "id": "selected-0068",
       "name": "霸王街机",
       "homeUrl": "https://www.yikm.net/",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterList: list rule returns text or attribute",
-        "chapterUrl: missing rule",
         "body: runtime JavaScript or variable dependency",
         "request: requires WebView"
       ],
       "priority": 4,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "检查是否存在等价静态公开请求；依赖页面运行环境的链路保留为专门适配。"
       ]
@@ -1492,17 +1499,16 @@
       "name": "上古卷轴",
       "homeUrl": "https://wiki.biligame.com/skyrim#🎃",
       "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified",
         "login features not ported; public access only"
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: runtime JavaScript or variable dependency",
-        "chapterUrl: missing rule"
+        "chapterList: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -1591,16 +1597,16 @@
       "id": "selected-0103",
       "name": "風月文學網",
       "homeUrl": "http://www.h528.com",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: list rule returns text or attribute",
-        "chapterUrl: missing rule"
+        "chapterList: list rule returns text or attribute"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
+        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
       ]
     },
     {
@@ -1881,20 +1887,6 @@
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
-      ]
-    },
-    {
-      "id": "selected-0131",
-      "name": "书包小说网",
-      "homeUrl": "https://234.484448.xyz/",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterUrl: missing rule"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
       ]
     },
     {
@@ -2250,19 +2242,19 @@
       "id": "selected-0169",
       "name": "Xnxx",
       "homeUrl": "https://www.xnxx.com/",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "bookName: runtime JavaScript or variable dependency",
         "chapterList: runtime JavaScript or variable dependency",
         "chapterTitle: runtime JavaScript or variable dependency",
-        "chapterUrl: missing rule",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -2813,14 +2805,13 @@
         "searchList: runtime JavaScript or variable dependency",
         "bookName: runtime JavaScript or variable dependency",
         "chapterList: runtime JavaScript or variable dependency",
-        "chapterUrl: missing rule",
+        "chapterUrl: empty chapter URL fallback requires pagination or volume context mapping",
         "body: runtime JavaScript or variable dependency",
         "directory initialization requires manual adaptation"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
     },
@@ -2917,7 +2908,9 @@
       "id": "main-0048",
       "name": "红豆漫",
       "homeUrl": "http://39.105.15.250",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: missing rule",
@@ -2925,7 +2918,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -2938,7 +2930,9 @@
       "id": "main-0049",
       "name": "全本小说",
       "homeUrl": "http://www.xqb5.org",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: missing rule",
@@ -2946,7 +2940,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -2975,7 +2968,9 @@
       "id": "main-0051",
       "name": "爱尚小说",
       "homeUrl": "http://m.23hh.info",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: missing rule",
@@ -2983,7 +2978,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -2997,17 +2991,16 @@
       "name": "上古卷轴",
       "homeUrl": "https://wiki.biligame.com/skyrim#🎃",
       "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified",
         "login features not ported; public access only"
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: runtime JavaScript or variable dependency",
-        "chapterUrl: missing rule"
+        "chapterList: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -3318,12 +3311,13 @@
       "id": "main-0084",
       "name": "海词木稽",
       "homeUrl": "http://dict.cn",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "bookName: runtime JavaScript or variable dependency",
-        "bookUrl: missing rule",
-        "chapterUrl: missing rule"
+        "bookUrl: missing rule"
       ],
       "priority": 4,
       "resolutionPlan": [
@@ -3335,12 +3329,13 @@
       "id": "main-0085",
       "name": "海词词典",
       "homeUrl": "http://dict.cn/",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "bookName: runtime JavaScript or variable dependency",
-        "bookUrl: missing rule",
-        "chapterUrl: missing rule"
+        "bookUrl: missing rule"
       ],
       "priority": 4,
       "resolutionPlan": [
@@ -3469,20 +3464,6 @@
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
-      ]
-    },
-    {
-      "id": "main-0100",
-      "name": "流行百科",
-      "homeUrl": "https://www.lxybaike.com#🎃",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterUrl: missing rule"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
       ]
     },
     {
@@ -3653,20 +3634,6 @@
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
-      ]
-    },
-    {
-      "id": "main-0131",
-      "name": "中华诗词",
-      "homeUrl": "https://m.zhonghuashici.com",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterUrl: missing rule"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
       ]
     },
     {
@@ -3994,6 +3961,7 @@
       "name": "民间故事",
       "homeUrl": "https://www.6mj.com#🎃",
       "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified",
         "original content replacement not ported; advertisements may remain"
       ],
       "status": "manual_adaptation_required",
@@ -4001,14 +3969,12 @@
         "searchList: runtime JavaScript or variable dependency",
         "chapterList: list rule returns text or attribute",
         "chapterTitle: runtime JavaScript or variable dependency",
-        "chapterUrl: missing rule",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
+        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
       ]
     },
     {
@@ -4016,6 +3982,7 @@
       "name": "民间故事",
       "homeUrl": "https://www.6mj.com/",
       "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified",
         "original content replacement not ported; advertisements may remain"
       ],
       "status": "manual_adaptation_required",
@@ -4023,14 +3990,12 @@
         "searchList: runtime JavaScript or variable dependency",
         "chapterList: list rule returns text or attribute",
         "chapterTitle: runtime JavaScript or variable dependency",
-        "chapterUrl: missing rule",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
+        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
       ]
     },
     {
@@ -4491,15 +4456,15 @@
       "id": "main-0232",
       "name": "久久小说",
       "homeUrl": "http://m.9191net.com/",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterUrl: missing rule",
         "body: ordered combination requires adaptation"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。",
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
       ]
     },
@@ -4583,16 +4548,16 @@
       "id": "main-0248",
       "name": "三啪文学",
       "homeUrl": "https://3pxs.xyz",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: runtime JavaScript or variable dependency",
-        "chapterUrl: missing rule"
+        "chapterList: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -5442,13 +5407,10 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterUrl: capture boundary is not literal",
-        "body: runtime JavaScript or variable dependency",
-        "body pagination: capture boundary is not literal"
+        "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
@@ -5640,16 +5602,16 @@
       "id": "main-0398",
       "name": "風月文學网",
       "homeUrl": "http://www.h528.com",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: list rule returns text or attribute",
-        "chapterUrl: missing rule"
+        "chapterList: list rule returns text or attribute"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
+        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
       ]
     },
     {
@@ -5675,17 +5637,16 @@
       "name": "上古卷轴",
       "homeUrl": "https://wiki.biligame.com/skyrim#",
       "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified",
         "login features not ported; public access only"
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: runtime JavaScript or variable dependency",
-        "chapterUrl: missing rule"
+        "chapterList: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -5736,20 +5697,6 @@
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
-      ]
-    },
-    {
-      "id": "main-0411",
-      "name": "久久小说网",
-      "homeUrl": "https://w7w.23fgh.com",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterUrl: missing rule"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
         "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
       ]
     },
@@ -6052,7 +5999,9 @@
       "id": "main-0465",
       "name": "九桃小说网",
       "homeUrl": "https://m.9taoxs.com",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: missing rule",
@@ -6060,7 +6009,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -6073,7 +6021,9 @@
       "id": "main-0466",
       "name": "我文阁",
       "homeUrl": "http://m.mytxt.cc",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: missing rule",
@@ -6081,7 +6031,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -6094,7 +6043,9 @@
       "id": "main-0467",
       "name": "无弹窗小说网",
       "homeUrl": "https://www.wtcxs.com",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: missing rule",
@@ -6102,7 +6053,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -6115,7 +6065,9 @@
       "id": "main-0468",
       "name": "涩文",
       "homeUrl": "https://book.sewen6.club",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: missing rule",
@@ -6123,7 +6075,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -6136,7 +6087,9 @@
       "id": "main-0469",
       "name": "白云博客",
       "homeUrl": "https://www.bybk.cc",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: missing rule",
@@ -6144,7 +6097,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -6157,7 +6109,9 @@
       "id": "main-0470",
       "name": "笔趣阁",
       "homeUrl": "http://www.pingtiance.org",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: missing rule",
@@ -6165,7 +6119,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -6178,7 +6131,9 @@
       "id": "main-0471",
       "name": "笔趣阁九九九",
       "homeUrl": "https://www.bqg999.cc",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: missing rule",
@@ -6186,7 +6141,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -6234,7 +6188,9 @@
       "id": "main-0474",
       "name": "笔趣阁",
       "homeUrl": "https://www.biquge7.com",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: missing rule",
@@ -6242,7 +6198,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -6255,7 +6210,9 @@
       "id": "main-0475",
       "name": "瘋情小說",
       "homeUrl": "https://crazyfiction.xyz",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: missing rule",
@@ -6263,7 +6220,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -6276,7 +6232,9 @@
       "id": "main-0476",
       "name": "迈哲小说",
       "homeUrl": "http://www.hot188.com",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: missing rule",
@@ -6284,7 +6242,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -6297,7 +6254,9 @@
       "id": "main-0477",
       "name": "五四中文网",
       "homeUrl": "https://www.54zw.cc",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: missing rule",
@@ -6305,7 +6264,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -6324,20 +6282,20 @@
         "searchList: missing rule",
         "bookName: missing rule",
         "bookUrl: missing rule",
-        "body: unsupported selector: [!-1]",
         "request: missing search URL"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。",
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
+        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
       ]
     },
     {
       "id": "main-0479",
       "name": "奇漫屋",
       "homeUrl": "http://m.qiman52.com",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: missing rule",
@@ -6345,7 +6303,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -6358,7 +6315,9 @@
       "id": "main-0480",
       "name": "御宅屋",
       "homeUrl": "https://www.ainan8.com",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: missing rule",
@@ -6366,7 +6325,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -6380,6 +6338,7 @@
       "name": "蔷薇后花园",
       "homeUrl": "https://houhuayuan.xyz",
       "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified",
         "login features not ported; public access only"
       ],
       "status": "manual_adaptation_required",
@@ -6389,7 +6348,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -6419,7 +6377,9 @@
       "id": "main-0483",
       "name": "新海岸线文学",
       "homeUrl": "https://m.yingshanrc.com",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "searchList: missing rule",
@@ -6427,7 +6387,6 @@
         "bookUrl: missing rule",
         "chapterList: missing rule",
         "chapterTitle: missing rule",
-        "chapterUrl: missing rule",
         "body: missing rule",
         "request: missing search URL"
       ],
@@ -6446,29 +6405,14 @@
         "searchList: runtime JavaScript or variable dependency",
         "bookName: runtime JavaScript or variable dependency",
         "chapterList: runtime JavaScript or variable dependency",
-        "chapterUrl: missing rule",
+        "chapterUrl: empty chapter URL fallback requires pagination or volume context mapping",
         "body: runtime JavaScript or variable dependency",
         "directory initialization requires manual adaptation"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
-      ]
-    },
-    {
-      "id": "main-0485",
-      "name": "中华诗词",
-      "homeUrl": "https://m.zhonghuashici.com#🎃",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterUrl: missing rule"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
       ]
     },
     {
@@ -6814,15 +6758,15 @@
       "id": "main-0530",
       "name": "书荒部落",
       "homeUrl": "https://noveless.com/",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterUrl: missing rule",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
@@ -7563,16 +7507,16 @@
       "id": "main-0639",
       "name": "英文阅读网",
       "homeUrl": "http://enread.com",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: runtime JavaScript or variable dependency",
-        "chapterUrl: missing rule"
+        "chapterList: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -8043,15 +7987,15 @@
       "id": "main-0683",
       "name": "久久",
       "homeUrl": "http://m.9191net.com",
-      "warnings": [],
+      "warnings": [
+        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterUrl: missing rule",
         "body: ordered combination requires adaptation"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。",
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
       ]
     },
@@ -8069,20 +8013,6 @@
       "resolutionPlan": [
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
-      ]
-    },
-    {
-      "id": "main-0688",
-      "name": "流行百科",
-      "homeUrl": "https://www.lxybaike.com#",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterUrl: missing rule"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
       ]
     },
     {
@@ -9559,20 +9489,6 @@
       ]
     },
     {
-      "id": "main-0863",
-      "name": "猩猩小说",
-      "homeUrl": "https://444.1006sd.com",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterUrl: missing rule"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
-      ]
-    },
-    {
       "id": "main-0864",
       "name": "玫瑰言情",
       "homeUrl": "http://www.mgyqw.com#",
@@ -9705,20 +9621,6 @@
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "检查是否存在等价静态公开请求；依赖页面运行环境的链路保留为专门适配。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
-      ]
-    },
-    {
-      "id": "main-0886",
-      "name": "龙腾小说网",
-      "homeUrl": "https://w9w.qwe97.com",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterUrl: missing rule"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "根据平台公开页面补齐缺失字段，取得搜索、目录和正文的结构依据。"
       ]
     },
     {
@@ -10609,7 +10511,7 @@
     }
   ],
   "validation": {
-    "behaviorTests": 44,
+    "behaviorTests": 47,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false

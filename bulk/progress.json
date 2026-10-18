@@ -529,16 +529,16 @@
       "id": "selected-0017",
       "name": "七猫小说",
       "homeUrl": "https://www.qimao.com#🎃",
-      "warnings": [],
+      "warnings": [
+        "directory address derived from native source.dirURL using fixed transformations; redirect behavior unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterUrl: runtime JavaScript or variable dependency",
-        "directory URL: capture boundary is not literal"
+        "chapterUrl: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -3609,16 +3609,16 @@
       "id": "main-0126",
       "name": "七猫小说",
       "homeUrl": "https://www.qimao.com#🎃",
-      "warnings": [],
+      "warnings": [
+        "directory address derived from native source.dirURL using fixed transformations; redirect behavior unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterUrl: runtime JavaScript or variable dependency",
-        "directory URL: capture boundary is not literal"
+        "chapterUrl: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -4248,13 +4248,11 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: runtime JavaScript or variable dependency",
-        "request: search expression requires runtime logic"
+        "chapterList: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -6572,13 +6570,11 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: runtime JavaScript or variable dependency",
-        "request: search expression requires runtime logic"
+        "chapterList: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -6722,13 +6718,11 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "body: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: ordered combination requires adaptation"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
       ]
@@ -6742,13 +6736,11 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "body: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: ordered combination requires adaptation"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
       ]
@@ -9350,12 +9342,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "body: runtime JavaScript or variable dependency",
-        "body pagination: runtime JavaScript or variable dependency"
+        "body pagination: unguarded regex capture can throw on no match; native failure mapping requires review"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
       ]
     },
     {
@@ -10422,7 +10414,7 @@
     }
   ],
   "validation": {
-    "behaviorTests": 55,
+    "behaviorTests": 61,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false

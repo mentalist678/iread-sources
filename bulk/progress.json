@@ -1,8 +1,8 @@
 {
   "baselineCommit": "033319b7b778f467059088da1e7340f38c32c9eb",
   "baseline": 217,
-  "current": 623,
-  "newlyTranslated": 407,
+  "current": 624,
+  "newlyTranslated": 408,
   "withheld": 1,
   "newIds": [
     "main-0005",
@@ -50,6 +50,7 @@
     "main-0118",
     "main-0119",
     "main-0122",
+    "main-0123",
     "main-0127",
     "main-0128",
     "main-0131",
@@ -426,7 +427,7 @@
     }
   ],
   "remainingByPriority": {
-    "1": 53,
+    "1": 52,
     "2": 6,
     "3": 60,
     "4": 452
@@ -3551,22 +3552,6 @@
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
-      ]
-    },
-    {
-      "id": "main-0123",
-      "name": "黑岩小说",
-      "homeUrl": "https://www.heiyan.com#🎃",
-      "warnings": [
-        "login features not ported; public access only"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterUrl: regex replacement capture syntax needs adaptation"
-      ],
-      "priority": 1,
-      "resolutionPlan": [
-        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
       ]
     },
     {
@@ -10414,12 +10399,12 @@
     }
   ],
   "validation": {
-    "behaviorTests": 61,
+    "behaviorTests": 62,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false
   },
-  "jsonConfigCount": 7,
+  "jsonConfigCount": 8,
   "jsonThreePhaseCount": 3,
   "references": [
     "https://jxd524.github.io/2018/11/14/bookConfigs/",

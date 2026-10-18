@@ -1,8 +1,8 @@
 {
   "baselineCommit": "033319b7b778f467059088da1e7340f38c32c9eb",
   "baseline": 217,
-  "current": 621,
-  "newlyTranslated": 405,
+  "current": 622,
+  "newlyTranslated": 406,
   "withheld": 1,
   "newIds": [
     "main-0005",
@@ -263,6 +263,7 @@
     "main-0725",
     "main-0730",
     "main-0731",
+    "main-0733",
     "main-0735",
     "main-0736",
     "main-0737",
@@ -427,7 +428,7 @@
     "1": 53,
     "2": 6,
     "3": 60,
-    "4": 454
+    "4": 453
   },
   "remaining": [
     {
@@ -8391,20 +8392,6 @@
       ]
     },
     {
-      "id": "main-0733",
-      "name": "若读小说",
-      "homeUrl": "https://www.shumiba.org",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "body pagination: runtime JavaScript or variable dependency"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
-      ]
-    },
-    {
       "id": "main-0734",
       "name": "四三看书",
       "homeUrl": "http://m.43kanshu.com#🎃",
@@ -8957,8 +8944,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "bookName: regex replacement capture syntax needs adaptation",
-        "directory pagination: runtime JavaScript or variable dependency",
-        "body pagination: runtime JavaScript or variable dependency"
+        "directory pagination: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
@@ -9347,13 +9333,11 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "body: runtime JavaScript or variable dependency",
-        "body pagination: runtime JavaScript or variable dependency"
+        "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -10455,7 +10439,7 @@
     }
   ],
   "validation": {
-    "behaviorTests": 50,
+    "behaviorTests": 51,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false

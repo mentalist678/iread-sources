@@ -1,8 +1,8 @@
 {
   "baselineCommit": "033319b7b778f467059088da1e7340f38c32c9eb",
   "baseline": 217,
-  "current": 622,
-  "newlyTranslated": 406,
+  "current": 623,
+  "newlyTranslated": 407,
   "withheld": 1,
   "newIds": [
     "main-0005",
@@ -182,6 +182,7 @@
     "main-0464",
     "main-0485",
     "main-0487",
+    "main-0492",
     "main-0495",
     "main-0496",
     "main-0497",
@@ -428,7 +429,7 @@
     "1": 53,
     "2": 6,
     "3": 60,
-    "4": 453
+    "4": 452
   },
   "remaining": [
     {
@@ -5057,7 +5058,6 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "bookUrl: URL template is not a valid static URL shape",
-        "chapterTitle: empty replacement pattern",
         "request: search expression requires runtime logic"
       ],
       "priority": 3,
@@ -5218,7 +5218,6 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "bookUrl: URL template is not a valid static URL shape",
-        "chapterTitle: empty replacement pattern",
         "request: search expression requires runtime logic"
       ],
       "priority": 3,
@@ -6432,24 +6431,6 @@
       ],
       "priority": 4,
       "resolutionPlan": [
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
-      ]
-    },
-    {
-      "id": "main-0492",
-      "name": "创世中文网",
-      "homeUrl": "https://chuangshi.qq.com/",
-      "warnings": [
-        "next-chapter link excluded from body pagination to preserve chapter boundaries"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "bookName: empty replacement pattern",
-        "directory URL: runtime JavaScript or variable dependency"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
     },
@@ -10441,7 +10422,7 @@
     }
   ],
   "validation": {
-    "behaviorTests": 53,
+    "behaviorTests": 55,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false

@@ -1,8 +1,8 @@
 {
   "baselineCommit": "033319b7b778f467059088da1e7340f38c32c9eb",
   "baseline": 217,
-  "current": 607,
-  "newlyTranslated": 391,
+  "current": 608,
+  "newlyTranslated": 392,
   "withheld": 1,
   "newIds": [
     "main-0005",
@@ -277,6 +277,7 @@
     "main-0789",
     "main-0795",
     "main-0803",
+    "main-0806",
     "main-0807",
     "main-0808",
     "main-0809",
@@ -410,7 +411,7 @@
     }
   ],
   "remainingByPriority": {
-    "1": 46,
+    "1": 45,
     "2": 6,
     "3": 60,
     "4": 475
@@ -9231,20 +9232,6 @@
       ]
     },
     {
-      "id": "main-0806",
-      "name": "七星阁小说网",
-      "homeUrl": "https://www.qixinge.com/",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "bookUrl: capture boundary is not literal"
-      ],
-      "priority": 1,
-      "resolutionPlan": [
-        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
-      ]
-    },
-    {
       "id": "main-0812",
       "name": "五八",
       "homeUrl": "https://58g.top",
@@ -10680,7 +10667,7 @@
     }
   ],
   "validation": {
-    "behaviorTests": 40,
+    "behaviorTests": 41,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false

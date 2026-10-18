@@ -424,10 +424,10 @@
     }
   ],
   "remainingByPriority": {
-    "1": 50,
+    "1": 53,
     "2": 6,
     "3": 60,
-    "4": 457
+    "4": 454
   },
   "remaining": [
     {
@@ -560,16 +560,16 @@
       "id": "selected-0019",
       "name": "连尚读书",
       "homeUrl": "http://www.lsds.cn",
-      "warnings": [],
+      "warnings": [
+        "directory address derived from native source.dirURL using fixed transformations; redirect behavior unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: regex replacement capture syntax needs adaptation",
-        "directory URL: runtime JavaScript or variable dependency"
+        "bookUrl: regex replacement capture syntax needs adaptation"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
-        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
       ]
     },
     {
@@ -709,7 +709,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: raw capture requires direct scalar result",
         "chapterList: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: raw capture requires direct scalar result",
@@ -717,8 +716,8 @@
       ],
       "priority": 4,
       "resolutionPlan": [
-        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
+        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
     },
@@ -731,7 +730,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: raw capture requires direct scalar result",
         "chapterList: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: raw capture requires direct scalar result",
@@ -739,8 +737,8 @@
       ],
       "priority": 4,
       "resolutionPlan": [
-        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
+        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
     },
@@ -4892,7 +4890,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: raw capture requires direct scalar result",
         "chapterList: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: raw capture requires direct scalar result",
@@ -4900,8 +4897,8 @@
       ],
       "priority": 4,
       "resolutionPlan": [
-        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
+        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
     },
@@ -4914,7 +4911,6 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: raw capture requires direct scalar result",
         "chapterList: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: raw capture requires direct scalar result",
@@ -4922,8 +4918,8 @@
       ],
       "priority": 4,
       "resolutionPlan": [
-        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
+        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
     },
@@ -6625,32 +6621,32 @@
       "id": "main-0517",
       "name": "连尚读书",
       "homeUrl": "http://www.lsds.cn/",
-      "warnings": [],
+      "warnings": [
+        "directory address derived from native source.dirURL using fixed transformations; redirect behavior unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: regex replacement capture syntax needs adaptation",
-        "directory URL: runtime JavaScript or variable dependency"
+        "bookUrl: regex replacement capture syntax needs adaptation"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
-        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
       ]
     },
     {
       "id": "main-0518",
       "name": "连尚读书",
       "homeUrl": "http://www.lsds.cn#🎃",
-      "warnings": [],
+      "warnings": [
+        "directory address derived from native source.dirURL using fixed transformations; redirect behavior unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "bookUrl: regex replacement capture syntax needs adaptation",
-        "directory URL: runtime JavaScript or variable dependency"
+        "bookUrl: regex replacement capture syntax needs adaptation"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
-        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
       ]
     },
     {
@@ -10459,7 +10455,7 @@
     }
   ],
   "validation": {
-    "behaviorTests": 49,
+    "behaviorTests": 50,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false

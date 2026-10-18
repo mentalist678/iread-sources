@@ -1,8 +1,8 @@
 {
   "baselineCommit": "033319b7b778f467059088da1e7340f38c32c9eb",
   "baseline": 217,
-  "current": 605,
-  "newlyTranslated": 389,
+  "current": 607,
+  "newlyTranslated": 391,
   "withheld": 1,
   "newIds": [
     "main-0005",
@@ -22,6 +22,7 @@
     "main-0036",
     "main-0042",
     "main-0043",
+    "main-0047",
     "main-0059",
     "main-0061",
     "main-0063",
@@ -209,6 +210,7 @@
     "main-0565",
     "main-0574",
     "main-0577",
+    "main-0578",
     "main-0584",
     "main-0585",
     "main-0590",
@@ -411,7 +413,7 @@
     "1": 46,
     "2": 6,
     "3": 60,
-    "4": 477
+    "4": 475
   },
   "remaining": [
     {
@@ -2915,20 +2917,6 @@
       ]
     },
     {
-      "id": "main-0047",
-      "name": "找故事网",
-      "homeUrl": "https://www.zhaogushi.cn",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterUrl: runtime JavaScript or variable dependency"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
-      ]
-    },
-    {
       "id": "main-0048",
       "name": "红豆漫",
       "homeUrl": "http://39.105.15.250",
@@ -4593,11 +4581,11 @@
       "name": "萌图社",
       "homeUrl": "https://moetu.club#🎃",
       "warnings": [
+        "chapter URL uses native directory address; no directory pagination configured; iOS context unverified",
         "login features not ported; public access only"
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
@@ -7156,20 +7144,6 @@
       ]
     },
     {
-      "id": "main-0578",
-      "name": "找故事网",
-      "homeUrl": "https://www.zhaogushi.cn#🎃",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterUrl: runtime JavaScript or variable dependency"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
-      ]
-    },
-    {
       "id": "main-0579",
       "name": "推书君网",
       "homeUrl": "https://pre-api.tuishujun.com#🎃",
@@ -9274,11 +9248,12 @@
       "id": "main-0812",
       "name": "五八",
       "homeUrl": "https://58g.top",
-      "warnings": [],
+      "warnings": [
+        "chapter URL uses native directory address; no directory pagination configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "bookName: runtime JavaScript or variable dependency",
-        "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
@@ -9362,11 +9337,12 @@
       "id": "main-0824",
       "name": "千度",
       "homeUrl": "https://www.qdsy25.com",
-      "warnings": [],
+      "warnings": [
+        "chapter URL uses native directory address; no directory pagination configured; iOS context unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "bookName: runtime JavaScript or variable dependency",
-        "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
@@ -10704,7 +10680,7 @@
     }
   ],
   "validation": {
-    "behaviorTests": 39,
+    "behaviorTests": 40,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false

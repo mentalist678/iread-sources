@@ -8427,11 +8427,12 @@
       "id": "main-0740",
       "name": "起点中文网",
       "homeUrl": "https://m.qidian.com#🎃",
-      "warnings": [],
+      "warnings": [
+        "directory address derived from native source.dirURL using fixed transformations; redirect behavior unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
         "bookUrl: runtime JavaScript or variable dependency",
-        "directory URL: directory address has unsupported template suffix",
         "directory initialization requires manual adaptation"
       ],
       "priority": 4,
@@ -10245,10 +10246,11 @@
       "id": "main-0977",
       "name": "乐文小说网",
       "homeUrl": "http://www.lwxs.net",
-      "warnings": [],
+      "warnings": [
+        "directory address derived from native source.dirURL using fixed transformations; redirect behavior unverified"
+      ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "directory URL: directory address has unsupported template suffix",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
@@ -10439,7 +10441,7 @@
     }
   ],
   "validation": {
-    "behaviorTests": 51,
+    "behaviorTests": 53,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false

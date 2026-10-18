@@ -473,13 +473,13 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic",
-        "directory URL: dynamic directory request"
+        "directory URL: JSON query needs filter/recursive mapping"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
     },
     {
@@ -523,7 +523,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterUrl: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request",
+        "directory URL: directory URL contains request-specific options",
         "book initialization: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
@@ -996,7 +996,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: JSON query needs filter/recursive mapping",
         "chapterUrl: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request"
+        "directory URL: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
@@ -1057,13 +1057,11 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "bookUrl: runtime JavaScript or variable dependency",
-        "chapterUrl: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request"
+        "chapterUrl: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -1093,7 +1091,6 @@
       "reasons": [
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterUrl: inline template combines independent fields",
-        "directory URL: dynamic directory request",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
@@ -1323,14 +1320,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency",
-        "body: JSON query needs filter/recursive mapping",
-        "directory URL: dynamic directory request"
+        "body: JSON query needs filter/recursive mapping"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
     },
     {
@@ -1485,13 +1480,11 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterUrl: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request",
         "embedded credential header requires review"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
     },
@@ -1539,12 +1532,10 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "directory URL: dynamic directory request",
         "embedded credential header requires review"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
     },
@@ -1642,15 +1633,13 @@
         "chapterList: JSON query needs filter/recursive mapping",
         "chapterUrl: inline template combines independent fields",
         "body: JSON query needs filter/recursive mapping",
-        "request: embedded credential parameter requires review",
-        "directory URL: dynamic directory request"
+        "request: embedded credential parameter requires review"
       ],
       "priority": 4,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
-        "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
     },
     {
@@ -1753,12 +1742,12 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request"
+        "directory URL: JSON query needs filter/recursive mapping"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
     },
     {
@@ -1871,14 +1860,12 @@
       "reasons": [
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
-        "request: search expression requires runtime logic",
-        "directory URL: dynamic directory request"
+        "request: search expression requires runtime logic"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
     },
     {
@@ -1960,13 +1947,11 @@
         "chapterTitle: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request",
         "headers: header contains nonstatic expressions"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
     },
@@ -1993,12 +1978,12 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request"
+        "directory URL: JSON query needs filter/recursive mapping"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
     },
     {
@@ -2086,7 +2071,7 @@
         "chapterList: JSON query needs filter/recursive mapping",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request"
+        "directory URL: directory URL contains request-specific options"
       ],
       "priority": 4,
       "resolutionPlan": [
@@ -2290,13 +2275,11 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterUrl: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request"
+        "chapterUrl: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -2335,7 +2318,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: JSON query needs filter/recursive mapping",
         "chapterUrl: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request"
+        "directory URL: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
@@ -2531,7 +2514,7 @@
         "bookUrl: JSON query needs filter/recursive mapping",
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request",
+        "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency",
         "headers: header contains nonstatic expressions"
       ],
@@ -2552,14 +2535,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency",
-        "body: JSON query needs filter/recursive mapping",
-        "directory URL: dynamic directory request"
+        "body: JSON query needs filter/recursive mapping"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
     },
     {
@@ -2728,14 +2709,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency",
-        "body: JSON query needs filter/recursive mapping",
-        "directory URL: dynamic directory request"
+        "body: JSON query needs filter/recursive mapping"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
     },
     {
@@ -2746,14 +2725,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency",
-        "body: JSON query needs filter/recursive mapping",
-        "directory URL: dynamic directory request"
+        "body: JSON query needs filter/recursive mapping"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
     },
     {
@@ -2898,7 +2875,7 @@
         "bookUrl: JSON query needs filter/recursive mapping",
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request",
+        "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency",
         "headers: header contains nonstatic expressions"
       ],
@@ -3436,14 +3413,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency",
-        "body: JSON query needs filter/recursive mapping",
-        "directory URL: dynamic directory request"
+        "body: JSON query needs filter/recursive mapping"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
     },
     {
@@ -3545,13 +3520,13 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic",
-        "directory URL: dynamic directory request"
+        "directory URL: JSON query needs filter/recursive mapping"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
     },
     {
@@ -3815,14 +3790,12 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency",
-        "body: JSON query needs filter/recursive mapping",
-        "directory URL: dynamic directory request"
+        "body: JSON query needs filter/recursive mapping"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
     },
     {
@@ -4039,12 +4012,12 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request"
+        "directory URL: JSON query needs filter/recursive mapping"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
     },
     {
@@ -4090,15 +4063,13 @@
         "chapterList: JSON query needs filter/recursive mapping",
         "chapterUrl: inline template combines independent fields",
         "body: JSON query needs filter/recursive mapping",
-        "request: embedded credential parameter requires review",
-        "directory URL: dynamic directory request"
+        "request: embedded credential parameter requires review"
       ],
       "priority": 4,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
-        "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
     },
     {
@@ -4172,13 +4143,13 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic",
-        "directory URL: dynamic directory request"
+        "directory URL: JSON query needs filter/recursive mapping"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
     },
     {
@@ -4774,7 +4745,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: JSON query needs filter/recursive mapping",
         "chapterUrl: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request"
+        "directory URL: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
@@ -4954,13 +4925,11 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterUrl: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request",
         "embedded credential header requires review"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
     },
@@ -5164,13 +5133,11 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterUrl: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request",
         "embedded credential header requires review"
       ],
       "priority": 4,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
     },
@@ -5948,7 +5915,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
         "request: non-form POST body",
-        "directory URL: dynamic directory request",
+        "directory URL: runtime JavaScript or variable dependency",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
@@ -7423,7 +7390,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "chapterUrl: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request",
+        "directory URL: directory URL contains request-specific options",
         "book initialization: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
@@ -8083,14 +8050,12 @@
       "reasons": [
         "chapterList: JSON query needs filter/recursive mapping",
         "chapterUrl: runtime JavaScript or variable dependency",
-        "body: JSON query needs filter/recursive mapping",
-        "directory URL: dynamic directory request"
+        "body: JSON query needs filter/recursive mapping"
       ],
       "priority": 4,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -8104,15 +8069,13 @@
         "chapterList: JSON query needs filter/recursive mapping",
         "chapterUrl: inline template combines independent fields",
         "body: JSON query needs filter/recursive mapping",
-        "request: embedded credential parameter requires review",
-        "directory URL: dynamic directory request"
+        "request: embedded credential parameter requires review"
       ],
       "priority": 4,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
-        "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
     },
     {
@@ -8189,7 +8152,7 @@
         "bookUrl: regex replacement capture syntax needs adaptation",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request"
+        "directory URL: directory URL contains request-specific options"
       ],
       "priority": 4,
       "resolutionPlan": [
@@ -8228,13 +8191,12 @@
         "chapterList: JSON query needs filter/recursive mapping",
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: JSON query needs filter/recursive mapping",
-        "directory URL: dynamic directory request"
+        "directory URL: JSON query needs filter/recursive mapping"
       ],
       "priority": 4,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
+        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -8970,12 +8932,10 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "directory URL: dynamic directory request",
         "embedded credential header requires review"
       ],
       "priority": 4,
       "resolutionPlan": [
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
     },
@@ -9138,7 +9098,6 @@
       "reasons": [
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterUrl: inline template combines independent fields",
-        "directory URL: dynamic directory request",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
@@ -10341,7 +10300,7 @@
       "status": "manual_adaptation_required",
       "reasons": [
         "request: dynamic request logic",
-        "directory URL: dynamic directory request",
+        "directory URL: directory URL contains request-specific options",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
@@ -10501,14 +10460,12 @@
       "reasons": [
         "chapterList: JSON query needs filter/recursive mapping",
         "chapterUrl: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request",
         "headers: header contains nonstatic expressions"
       ],
       "priority": 4,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
-        "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
     },
@@ -10523,7 +10480,7 @@
         "bookUrl: URL includes request-specific options",
         "chapterList: JSON query needs filter/recursive mapping",
         "chapterUrl: runtime JavaScript or variable dependency",
-        "directory URL: dynamic directory request"
+        "directory URL: runtime JavaScript or variable dependency"
       ],
       "priority": 4,
       "resolutionPlan": [
@@ -10869,7 +10826,7 @@
     }
   ],
   "validation": {
-    "behaviorTests": 34,
+    "behaviorTests": 35,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false

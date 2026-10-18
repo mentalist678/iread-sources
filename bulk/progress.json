@@ -1,8 +1,8 @@
 {
   "baselineCommit": "033319b7b778f467059088da1e7340f38c32c9eb",
   "baseline": 217,
-  "current": 597,
-  "newlyTranslated": 381,
+  "current": 598,
+  "newlyTranslated": 382,
   "withheld": 1,
   "newIds": [
     "main-0005",
@@ -249,6 +249,7 @@
     "main-0731",
     "main-0735",
     "main-0736",
+    "main-0737",
     "main-0738",
     "main-0741",
     "main-0742",
@@ -403,7 +404,7 @@
     "1": 47,
     "2": 5,
     "3": 60,
-    "4": 485
+    "4": 484
   },
   "remaining": [
     {
@@ -8705,20 +8706,6 @@
       ]
     },
     {
-      "id": "main-0737",
-      "name": "爱下文学",
-      "homeUrl": "http://www.aixiawx.com/#玄奇",
-      "warnings": [],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "bookUrl: runtime JavaScript or variable dependency"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
-      ]
-    },
-    {
       "id": "main-0739",
       "name": "斋书苑子",
       "homeUrl": "http://www.zsyxs.cc#",
@@ -8758,7 +8745,7 @@
       "warnings": [],
       "status": "manual_adaptation_required",
       "reasons": [
-        "chapterList: invalid XPath: Invalid expression"
+        "chapterList: descending or length-dependent collection interval"
       ],
       "priority": 1,
       "resolutionPlan": [
@@ -9074,7 +9061,7 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: invalid XPath: Invalid expression",
+        "searchList: descending or length-dependent collection interval",
         "body: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic",
         "body pagination: runtime JavaScript or variable dependency",
@@ -9313,7 +9300,7 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "directory pagination: invalid XPath: Invalid expression"
+        "directory pagination: descending or length-dependent collection interval"
       ],
       "priority": 2,
       "resolutionPlan": [
@@ -9849,7 +9836,7 @@
       ],
       "status": "manual_adaptation_required",
       "reasons": [
-        "searchList: invalid XPath: Invalid expression",
+        "searchList: descending or length-dependent collection interval",
         "body: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic",
         "body pagination: runtime JavaScript or variable dependency",
@@ -10826,7 +10813,7 @@
     }
   ],
   "validation": {
-    "behaviorTests": 35,
+    "behaviorTests": 37,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false

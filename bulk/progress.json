@@ -1,8 +1,8 @@
 {
   "baselineCommit": "033319b7b778f467059088da1e7340f38c32c9eb",
   "baseline": 217,
-  "current": 625,
-  "newlyTranslated": 409,
+  "current": 630,
+  "newlyTranslated": 414,
   "withheld": 1,
   "newIds": [
     "main-0005",
@@ -23,6 +23,7 @@
     "main-0042",
     "main-0043",
     "main-0047",
+    "main-0052",
     "main-0059",
     "main-0061",
     "main-0063",
@@ -91,6 +92,7 @@
     "main-0242",
     "main-0245",
     "main-0246",
+    "main-0248",
     "main-0249",
     "main-0252",
     "main-0259",
@@ -151,6 +153,7 @@
     "main-0399",
     "main-0401",
     "main-0402",
+    "main-0403",
     "main-0406",
     "main-0407",
     "main-0408",
@@ -240,6 +243,7 @@
     "main-0634",
     "main-0636",
     "main-0638",
+    "main-0639",
     "main-0646",
     "main-0652",
     "main-0653",
@@ -388,6 +392,7 @@
     "selected-0080",
     "selected-0085",
     "selected-0086",
+    "selected-0095",
     "selected-0096",
     "selected-0097",
     "selected-0103",
@@ -428,10 +433,11 @@
     }
   ],
   "remainingByPriority": {
-    "1": 52,
-    "2": 6,
-    "3": 59,
-    "4": 452
+    "1": 130,
+    "2": 44,
+    "3": 188,
+    "4": 61,
+    "5": 141
   },
   "remaining": [
     {
@@ -450,7 +456,7 @@
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
@@ -466,7 +472,7 @@
       "reasons": [
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
@@ -484,7 +490,7 @@
         "body: JSON query needs filter/recursive mapping",
         "request: embedded credential parameter requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
@@ -503,7 +509,7 @@
         "request: search expression requires runtime logic",
         "directory URL: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -521,7 +527,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: ordered combination requires adaptation"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -538,7 +544,7 @@
       "reasons": [
         "chapterUrl: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -554,7 +560,7 @@
         "directory URL: directory URL contains request-specific options",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -588,7 +594,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -621,7 +627,7 @@
         "bookUrl: URL includes request-specific options",
         "chapterUrl: URL template combines multiple JSON fields"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
@@ -637,7 +643,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -655,7 +661,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
@@ -675,7 +681,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory initialization requires manual adaptation"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -696,7 +702,7 @@
         "body: JSON query needs filter/recursive mapping",
         "directory URL: dynamic directory request"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
@@ -718,7 +724,7 @@
         "body: raw capture requires direct scalar result",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
@@ -739,7 +745,7 @@
         "body: raw capture requires direct scalar result",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
@@ -760,7 +766,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: script replacement contains runtime logic"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
@@ -795,7 +801,7 @@
       "reasons": [
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
@@ -812,7 +818,7 @@
         "searchList: runtime JavaScript or variable dependency",
         "request: fragment keyword requires runtime filtering"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -842,7 +848,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -859,7 +865,7 @@
         "request: search expression requires runtime logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -881,7 +887,7 @@
         "request: search expression requires runtime logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -901,7 +907,7 @@
         "searchList: JSON query needs filter/recursive mapping",
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -919,7 +925,7 @@
         "searchList: runtime JavaScript or variable dependency",
         "request: dynamic request logic"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -950,7 +956,7 @@
         "bookName: ordered combination requires adaptation",
         "bookUrl: ordered combination requires adaptation"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
       ]
@@ -964,7 +970,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -983,7 +989,7 @@
         "chapterTitle: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -1002,7 +1008,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -1021,7 +1027,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -1042,7 +1048,7 @@
         "chapterUrl: URL template combines multiple JSON fields",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
@@ -1065,7 +1071,7 @@
         "request: dynamic request logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -1082,7 +1088,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -1099,7 +1105,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -1116,7 +1122,7 @@
         "chapterUrl: inline template combines independent fields",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
@@ -1148,7 +1154,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -1202,7 +1208,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
@@ -1227,7 +1233,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -1244,7 +1250,7 @@
         "searchList: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -1259,7 +1265,7 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -1273,7 +1279,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -1294,7 +1300,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "dynamic or invalid headers"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
@@ -1329,7 +1335,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: ordered combination requires adaptation"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -1345,7 +1351,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
@@ -1375,7 +1381,7 @@
         "directory pagination: runtime JavaScript or variable dependency",
         "body pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -1397,7 +1403,7 @@
         "body pagination: regex replacement capture syntax needs adaptation",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
@@ -1418,7 +1424,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
@@ -1436,7 +1442,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -1453,7 +1459,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -1473,7 +1479,7 @@
         "body: regex replacement capture syntax needs adaptation",
         "request: embedded credential parameter requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -1491,27 +1497,10 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
-      ]
-    },
-    {
-      "id": "selected-0095",
-      "name": "上古卷轴",
-      "homeUrl": "https://wiki.biligame.com/skyrim#🎃",
-      "warnings": [
-        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified",
-        "login features not ported; public access only"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterList: runtime JavaScript or variable dependency"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -1526,7 +1515,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -1540,7 +1529,7 @@
       "reasons": [
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
@@ -1554,7 +1543,7 @@
       "reasons": [
         "chapterList: unsupported selector: -.chapters"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
       ]
@@ -1575,7 +1564,7 @@
         "request: search expression requires runtime logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -1591,7 +1580,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -1607,7 +1596,7 @@
       "reasons": [
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
@@ -1625,7 +1614,7 @@
         "body: JSON query needs filter/recursive mapping",
         "request: embedded credential parameter requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
@@ -1647,7 +1636,7 @@
         "directory URL: dynamic directory request",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -1666,7 +1655,7 @@
         "chapterUrl: URL template combines multiple JSON fields",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
@@ -1683,7 +1672,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -1699,7 +1688,7 @@
         "body: runtime JavaScript or variable dependency",
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -1717,7 +1706,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: initialization and field parser cannot be composed"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -1734,7 +1723,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory URL: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
@@ -1767,7 +1756,7 @@
         "chapterUrl: URL template combines multiple JSON fields",
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -1783,7 +1772,7 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -1800,7 +1789,7 @@
         "body: runtime JavaScript or variable dependency",
         "body pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -1815,7 +1804,7 @@
       "reasons": [
         "directory URL: regex replacement capture syntax needs adaptation"
       ],
-      "priority": 2,
+      "priority": 1,
       "resolutionPlan": [
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
       ]
@@ -1830,7 +1819,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -1852,7 +1841,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -1869,7 +1858,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -1888,7 +1877,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -1903,7 +1892,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -1925,7 +1914,7 @@
         "body: runtime JavaScript or variable dependency",
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -1940,7 +1929,7 @@
       "reasons": [
         "request: dynamic request logic"
       ],
-      "priority": 3,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
@@ -1956,7 +1945,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory URL: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
@@ -1974,7 +1963,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: directory address has unsupported template suffix"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -1994,7 +1983,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -2012,7 +2001,7 @@
         "chapterUrl: URL template combines multiple JSON fields",
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
@@ -2031,7 +2020,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: ordered combination requires adaptation"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -2049,7 +2038,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory URL: directory URL contains request-specific options"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -2066,7 +2055,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -2082,7 +2071,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -2121,7 +2110,7 @@
         "chapterUrl: URL template combines multiple JSON fields",
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -2138,7 +2127,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -2175,7 +2164,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -2192,7 +2181,7 @@
       "reasons": [
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -2206,7 +2195,7 @@
       "reasons": [
         "chapterList: unsupported selector: -.chapters"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
       ]
@@ -2220,7 +2209,7 @@
       "reasons": [
         "searchList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -2239,7 +2228,7 @@
         "chapterTitle: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -2253,7 +2242,7 @@
       "reasons": [
         "chapterUrl: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -2276,7 +2265,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: dynamic request logic"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
@@ -2296,7 +2285,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -2315,7 +2304,7 @@
         "request: search expression requires runtime logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -2337,7 +2326,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -2356,7 +2345,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory URL: dynamic directory request"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。",
@@ -2376,7 +2365,7 @@
         "chapterTitle: unsupported selector: {$.is_free}🔒{$.name}",
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
@@ -2397,7 +2386,7 @@
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
@@ -2415,7 +2404,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -2467,7 +2456,7 @@
         "body: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -2492,7 +2481,7 @@
         "book initialization: runtime JavaScript or variable dependency",
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
@@ -2510,7 +2499,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
@@ -2527,7 +2516,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -2543,7 +2532,7 @@
       "reasons": [
         "request: dynamic request logic"
       ],
-      "priority": 3,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
@@ -2557,7 +2546,7 @@
       "reasons": [
         "request: dynamic request logic"
       ],
-      "priority": 3,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
@@ -2575,7 +2564,7 @@
         "chapterUrl: URL template combines multiple JSON fields",
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -2595,7 +2584,7 @@
         "chapterUrl: URL template combines multiple JSON fields",
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -2611,7 +2600,7 @@
       "reasons": [
         "chapterList: unsupported selector: -.chapters"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
       ]
@@ -2625,7 +2614,7 @@
       "reasons": [
         "chapterList: unsupported selector: -.chapters"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
       ]
@@ -2653,7 +2642,7 @@
       "reasons": [
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
@@ -2669,7 +2658,7 @@
       "reasons": [
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
@@ -2684,7 +2673,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
@@ -2700,7 +2689,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
@@ -2719,7 +2708,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "request: request-specific headers require review"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -2753,7 +2742,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -2774,7 +2763,7 @@
         "request: search expression requires runtime logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -2796,7 +2785,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory initialization requires manual adaptation"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -2811,7 +2800,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -2827,7 +2816,7 @@
         "body: runtime JavaScript or variable dependency",
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -2851,7 +2840,7 @@
         "book initialization: runtime JavaScript or variable dependency",
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
@@ -2885,7 +2874,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -2946,7 +2935,7 @@
       "reasons": [
         "body: script replacement contains runtime logic"
       ],
-      "priority": 1,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -2974,23 +2963,6 @@
       ]
     },
     {
-      "id": "main-0052",
-      "name": "上古卷轴",
-      "homeUrl": "https://wiki.biligame.com/skyrim#🎃",
-      "warnings": [
-        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified",
-        "login features not ported; public access only"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterList: runtime JavaScript or variable dependency"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
-      ]
-    },
-    {
       "id": "main-0053",
       "name": "国学汉籍",
       "homeUrl": "https://www.gxhj.com#🎃",
@@ -2999,7 +2971,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -3016,7 +2988,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: embedded credential parameter requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
@@ -3038,7 +3010,7 @@
         "request: search expression requires runtime logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -3059,7 +3031,7 @@
         "chapterUrl: URL template combines multiple JSON fields",
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -3079,7 +3051,7 @@
         "chapterUrl: URL template combines multiple JSON fields",
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -3096,7 +3068,7 @@
         "request: request-specific headers require review",
         "body pagination: unsupported selector: :matches(下一页)"
       ],
-      "priority": 3,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -3113,7 +3085,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -3134,7 +3106,7 @@
         "request: dynamic request logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -3151,7 +3123,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -3169,7 +3141,7 @@
         "directory URL: dynamic directory request",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -3185,7 +3157,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -3219,7 +3191,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: embedded credential parameter requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
@@ -3237,7 +3209,7 @@
       "reasons": [
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
@@ -3253,7 +3225,7 @@
       "reasons": [
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
@@ -3341,7 +3313,7 @@
       "reasons": [
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
@@ -3358,7 +3330,7 @@
         "searchList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -3373,7 +3345,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
@@ -3406,7 +3378,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -3427,7 +3399,7 @@
         "body: JSON query needs filter/recursive mapping",
         "directory URL: dynamic directory request"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
@@ -3447,7 +3419,7 @@
         "chapterUrl: URL template combines multiple JSON fields",
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
@@ -3465,7 +3437,7 @@
         "request: search expression requires runtime logic",
         "directory URL: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -3483,7 +3455,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory pagination: regex replacement capture syntax needs adaptation"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -3499,7 +3471,7 @@
         "chapterList: unsupported selector: -ul",
         "chapterTitle: ordered combination requires adaptation"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
       ]
@@ -3513,7 +3485,7 @@
       "reasons": [
         "chapterTitle: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -3527,7 +3499,7 @@
       "reasons": [
         "chapterList: unsupported selector: -class.chapters"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
       ]
@@ -3547,7 +3519,7 @@
         "body: regex replacement capture syntax needs adaptation",
         "request: embedded credential parameter requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -3567,7 +3539,7 @@
         "chapterTitle: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -3585,7 +3557,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -3602,7 +3574,7 @@
       "reasons": [
         "chapterUrl: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -3617,7 +3589,7 @@
         "searchList: unsupported collection/combinator",
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -3633,7 +3605,7 @@
         "searchList: unsupported collection/combinator",
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -3649,7 +3621,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
@@ -3664,7 +3636,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -3684,7 +3656,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -3700,7 +3672,7 @@
         "searchList: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -3719,7 +3691,7 @@
         "body: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -3748,7 +3720,7 @@
       "reasons": [
         "body: ordered combination requires adaptation"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
       ]
@@ -3765,7 +3737,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -3780,7 +3752,7 @@
         "chapterList: unsupported selector: -id.book-part",
         "body: script replacement contains runtime logic"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -3796,7 +3768,7 @@
         "chapterList: unsupported selector: -id.book-part",
         "body: script replacement contains runtime logic"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -3816,7 +3788,7 @@
         "chapterTitle: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -3830,7 +3802,7 @@
       "reasons": [
         "searchList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -3850,7 +3822,7 @@
         "body: JSON query needs filter/recursive mapping",
         "directory URL: dynamic directory request"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
@@ -3869,7 +3841,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory URL: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
@@ -3884,7 +3856,7 @@
       "reasons": [
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -3901,7 +3873,7 @@
         "chapterUrl: URL template combines multiple JSON fields",
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
@@ -3920,7 +3892,7 @@
         "body: JSON query needs filter/recursive mapping",
         "request: embedded credential parameter requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
@@ -3941,7 +3913,7 @@
         "chapterTitle: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -3960,7 +3932,7 @@
         "chapterTitle: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -3977,7 +3949,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -3994,7 +3966,7 @@
         "request: search expression requires runtime logic",
         "directory URL: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -4013,7 +3985,7 @@
         "body: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -4029,7 +4001,7 @@
       "reasons": [
         "chapterUrl: inline template combines independent fields"
       ],
-      "priority": 1,
+      "priority": 3,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
       ]
@@ -4043,7 +4015,7 @@
       "reasons": [
         "chapterUrl: inline template combines independent fields"
       ],
-      "priority": 1,
+      "priority": 3,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
       ]
@@ -4058,7 +4030,7 @@
         "chapterUrl: regex replacement capture syntax needs adaptation",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -4119,7 +4091,7 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -4136,7 +4108,7 @@
         "request: search expression requires runtime logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -4154,7 +4126,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory pagination: regex replacement capture syntax needs adaptation"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -4175,7 +4147,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
@@ -4197,7 +4169,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
@@ -4219,7 +4191,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: dynamic request logic"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -4236,7 +4208,7 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -4253,7 +4225,7 @@
         "searchList: runtime JavaScript or variable dependency",
         "request: dynamic request logic"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -4269,7 +4241,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: dynamic request logic"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -4285,7 +4257,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: dynamic request logic"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -4300,7 +4272,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -4315,7 +4287,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -4330,7 +4302,7 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -4346,7 +4318,7 @@
       "reasons": [
         "chapterTitle: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -4367,7 +4339,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -4386,7 +4358,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -4409,7 +4381,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -4428,7 +4400,7 @@
       "reasons": [
         "body: ordered combination requires adaptation"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
       ]
@@ -4442,7 +4414,7 @@
       "reasons": [
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -4456,7 +4428,7 @@
       "reasons": [
         "chapterList: unsupported selector: -class.column-list"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
       ]
@@ -4473,7 +4445,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -4490,7 +4462,7 @@
       "reasons": [
         "request: request-specific headers require review"
       ],
-      "priority": 3,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
@@ -4510,22 +4482,6 @@
       ]
     },
     {
-      "id": "main-0248",
-      "name": "三啪文学",
-      "homeUrl": "https://3pxs.xyz",
-      "warnings": [
-        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterList: runtime JavaScript or variable dependency"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
-      ]
-    },
-    {
       "id": "main-0253",
       "name": "红甘泉网",
       "homeUrl": "http://m.hgqxs.com",
@@ -4534,7 +4490,7 @@
       "reasons": [
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -4557,7 +4513,7 @@
         "directory URL: script replacement capture requires adaptation",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -4595,7 +4551,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -4630,7 +4586,7 @@
       "reasons": [
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
@@ -4644,7 +4600,7 @@
       "reasons": [
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
@@ -4678,7 +4634,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
@@ -4708,7 +4664,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -4722,7 +4678,7 @@
       "reasons": [
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
@@ -4740,7 +4696,7 @@
         "request: request options contain expressions rather than literal data",
         "body pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -4758,7 +4714,7 @@
         "request: search expression requires runtime logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -4775,7 +4731,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
@@ -4796,7 +4752,7 @@
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
@@ -4831,7 +4787,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: regex replacement capture syntax needs adaptation"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -4847,7 +4803,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -4862,7 +4818,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -4881,7 +4837,7 @@
         "body: raw capture requires direct scalar result",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
@@ -4902,7 +4858,7 @@
         "body: raw capture requires direct scalar result",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
@@ -4939,7 +4895,7 @@
         "request: search expression requires runtime logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -4962,7 +4918,7 @@
         "request: search expression requires runtime logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -4979,7 +4935,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
@@ -4994,7 +4950,7 @@
       "reasons": [
         "searchList: JSON query needs filter/recursive mapping"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
@@ -5012,7 +4968,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
@@ -5029,7 +4985,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -5064,7 +5020,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory URL: dynamic directory request"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -5086,7 +5042,7 @@
         "directory URL: dynamic directory request",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -5103,7 +5059,7 @@
       "reasons": [
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
@@ -5117,7 +5073,7 @@
       "reasons": [
         "dynamic or invalid headers"
       ],
-      "priority": 3,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
@@ -5133,7 +5089,7 @@
       "reasons": [
         "request: request-specific headers require review"
       ],
-      "priority": 3,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
@@ -5148,7 +5104,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -5166,7 +5122,7 @@
         "request: request options contain expressions rather than literal data",
         "body pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -5187,7 +5143,7 @@
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
@@ -5219,7 +5175,7 @@
       "reasons": [
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -5234,7 +5190,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "chapterUrl: regex replacement capture syntax needs adaptation"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
@@ -5266,7 +5222,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -5282,7 +5238,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -5302,7 +5258,7 @@
         "body: script replacement contains runtime logic",
         "request: repeated query parameter"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -5323,7 +5279,7 @@
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -5340,7 +5296,7 @@
       "reasons": [
         "directory URL: regex replacement capture syntax needs adaptation"
       ],
-      "priority": 2,
+      "priority": 1,
       "resolutionPlan": [
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
       ]
@@ -5354,7 +5310,7 @@
       "reasons": [
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -5370,7 +5326,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -5398,7 +5354,7 @@
       "reasons": [
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
       ]
@@ -5417,7 +5373,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: script replacement contains runtime logic"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
@@ -5437,7 +5393,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: script replacement contains runtime logic"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
@@ -5452,7 +5408,7 @@
       "reasons": [
         "chapterTitle: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -5469,7 +5425,7 @@
         "searchList: JSON query needs filter/recursive mapping",
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -5505,7 +5461,7 @@
         "directory pagination: runtime JavaScript or variable dependency",
         "body pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -5520,7 +5476,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -5538,7 +5494,7 @@
         "body pagination: runtime JavaScript or variable dependency",
         "dynamic or invalid headers"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -5554,7 +5510,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -5571,27 +5527,10 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: initialization and field parser cannot be composed"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
-      ]
-    },
-    {
-      "id": "main-0403",
-      "name": "上古卷轴",
-      "homeUrl": "https://wiki.biligame.com/skyrim#",
-      "warnings": [
-        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified",
-        "login features not ported; public access only"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterList: runtime JavaScript or variable dependency"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -5621,7 +5560,7 @@
         "body: JSON query needs filter/recursive mapping",
         "request: embedded credential parameter requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
@@ -5669,7 +5608,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: nonliteral script return"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -5692,7 +5631,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -5726,7 +5665,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -5755,7 +5694,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -5770,7 +5709,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "request: dynamic request logic"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -5804,7 +5743,7 @@
         "request: search expression requires runtime logic",
         "body pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -5824,7 +5763,7 @@
         "request: search expression requires runtime logic",
         "body pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -5845,7 +5784,7 @@
         "request: search expression requires runtime logic",
         "body pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -5865,7 +5804,7 @@
         "chapterUrl: regex replacement capture syntax needs adaptation",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
@@ -5884,7 +5823,7 @@
         "chapterUrl: regex replacement capture syntax needs adaptation",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
@@ -5899,7 +5838,7 @@
       "reasons": [
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -5915,7 +5854,7 @@
       "reasons": [
         "request: request-specific headers require review"
       ],
-      "priority": 3,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
@@ -5933,7 +5872,7 @@
         "body pagination: runtime JavaScript or variable dependency",
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
@@ -6106,7 +6045,7 @@
         "bookUrl: URL includes request-specific options",
         "chapterUrl: URL template combines multiple JSON fields"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
@@ -6354,7 +6293,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory initialization requires manual adaptation"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -6375,7 +6314,7 @@
         "request: embedded credential parameter requires review",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -6395,7 +6334,7 @@
         "request: search expression requires runtime logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -6413,7 +6352,7 @@
       "reasons": [
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -6441,7 +6380,7 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -6457,7 +6396,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: ordered combination requires adaptation"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -6476,7 +6415,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: ordered combination requires adaptation"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -6494,7 +6433,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: embedded credential parameter requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
@@ -6510,7 +6449,7 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -6524,7 +6463,7 @@
       "reasons": [
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
@@ -6541,7 +6480,7 @@
         "bookUrl: URL includes request-specific options",
         "chapterUrl: URL template combines multiple JSON fields"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
@@ -6558,7 +6497,7 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -6575,7 +6514,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -6622,7 +6561,7 @@
       "reasons": [
         "bookUrl: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -6654,7 +6593,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -6673,7 +6612,7 @@
         "request: search expression requires runtime logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -6690,7 +6629,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -6707,7 +6646,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: ordered combination requires adaptation"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
@@ -6725,7 +6664,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: ordered combination requires adaptation"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
@@ -6743,7 +6682,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -6759,7 +6698,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -6779,7 +6718,7 @@
         "request: request options contain expressions rather than literal data",
         "dynamic or invalid headers"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -6814,7 +6753,7 @@
         "body: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -6836,7 +6775,7 @@
         "request: search expression requires runtime logic",
         "directory URL: script replacement contains runtime logic"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -6853,7 +6792,7 @@
         "request: search expression requires runtime logic",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
@@ -6884,7 +6823,7 @@
       "reasons": [
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -6899,7 +6838,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -6921,7 +6860,7 @@
         "directory pagination: runtime JavaScript or variable dependency",
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -6938,7 +6877,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -6954,7 +6893,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -6971,7 +6910,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -6986,7 +6925,7 @@
         "directory URL: JSON query needs filter/recursive mapping",
         "body pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -7002,7 +6941,7 @@
         "directory URL: JSON query needs filter/recursive mapping",
         "body pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -7020,7 +6959,7 @@
       "reasons": [
         "request: request-specific headers require review"
       ],
-      "priority": 3,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
@@ -7034,7 +6973,7 @@
       "reasons": [
         "directory pagination selects all options; next-page semantics require adaptation"
       ],
-      "priority": 2,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -7065,7 +7004,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -7082,7 +7021,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -7098,7 +7037,7 @@
         "directory URL: directory URL contains request-specific options",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -7117,7 +7056,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -7135,7 +7074,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -7150,7 +7089,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "chapterTitle: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -7164,7 +7103,7 @@
       "reasons": [
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
@@ -7178,7 +7117,7 @@
       "reasons": [
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
@@ -7197,7 +7136,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -7212,7 +7151,7 @@
       "reasons": [
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -7229,7 +7168,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -7243,7 +7182,7 @@
       "reasons": [
         "request: request options contain expressions rather than literal data"
       ],
-      "priority": 3,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
@@ -7276,7 +7215,7 @@
         "body: JSON query needs filter/recursive mapping",
         "request: embedded credential parameter requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。",
@@ -7294,7 +7233,7 @@
       "reasons": [
         "body: ordered combination requires adaptation"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
       ]
@@ -7328,7 +7267,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -7346,7 +7285,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -7363,7 +7302,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -7382,7 +7321,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -7417,27 +7356,11 @@
         "body: runtime JavaScript or variable dependency",
         "body pagination: regex replacement capture syntax needs adaptation"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
-      ]
-    },
-    {
-      "id": "main-0639",
-      "name": "英文阅读网",
-      "homeUrl": "http://enread.com",
-      "warnings": [
-        "empty chapter URL uses original reader single-page directory fallback; no volume rule configured; iOS context unverified"
-      ],
-      "status": "manual_adaptation_required",
-      "reasons": [
-        "chapterList: runtime JavaScript or variable dependency"
-      ],
-      "priority": 4,
-      "resolutionPlan": [
-        "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
     },
     {
@@ -7450,7 +7373,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: ordered combination requires adaptation"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
@@ -7466,7 +7389,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: ordered combination requires adaptation"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
@@ -7483,7 +7406,7 @@
         "body: ordered combination requires adaptation",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。",
@@ -7520,7 +7443,7 @@
         "body: runtime JavaScript or variable dependency",
         "body pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -7554,7 +7477,7 @@
       "reasons": [
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -7573,7 +7496,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: dynamic request logic"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -7593,7 +7516,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: dynamic request logic"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -7647,7 +7570,7 @@
         "searchList: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -7665,7 +7588,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: initialization and field parser cannot be composed"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -7686,7 +7609,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
@@ -7708,7 +7631,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
@@ -7725,7 +7648,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
@@ -7741,7 +7664,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -7757,7 +7680,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "body: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -7776,7 +7699,7 @@
         "body: JSON query needs filter/recursive mapping",
         "request: embedded credential parameter requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
@@ -7797,7 +7720,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -7859,7 +7782,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory URL: directory URL contains request-specific options"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -7879,7 +7802,7 @@
         "body: JSON query needs filter/recursive mapping",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
@@ -7898,7 +7821,7 @@
         "body: JSON query needs filter/recursive mapping",
         "directory URL: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -7915,7 +7838,7 @@
       "reasons": [
         "body: ordered combination requires adaptation"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "验证原生解析器的合并、反转与重复项语义；不能用XPath并集代替有序集合。"
       ]
@@ -7930,7 +7853,7 @@
         "chapterUrl: first-only regex replacement needs adaptation",
         "request: embedded credential parameter requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
@@ -7946,7 +7869,7 @@
         "chapterTitle: regex replacement capture syntax needs adaptation",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -7962,7 +7885,7 @@
         "chapterTitle: regex replacement capture syntax needs adaptation",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -7978,7 +7901,7 @@
         "chapterList: unsupported collection/combinator",
         "body pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -7997,7 +7920,7 @@
         "request: search expression requires runtime logic",
         "directory URL: inline template combines independent fields"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -8015,7 +7938,7 @@
       "reasons": [
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -8033,7 +7956,7 @@
       "reasons": [
         "searchList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -8051,7 +7974,7 @@
       "reasons": [
         "searchList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -8083,7 +8006,7 @@
         "chapterTitle: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -8130,7 +8053,7 @@
         "searchList: runtime JavaScript or variable dependency",
         "directory URL: JSON query needs filter/recursive mapping"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。"
@@ -8189,7 +8112,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -8210,7 +8133,7 @@
         "directory URL: inline template combines independent fields",
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -8231,7 +8154,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic"
       ],
-      "priority": 4,
+      "priority": 2,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -8262,7 +8185,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -8279,7 +8202,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -8298,7 +8221,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -8313,7 +8236,7 @@
       "reasons": [
         "request: dynamic request logic"
       ],
-      "priority": 3,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
@@ -8345,7 +8268,7 @@
       "reasons": [
         "searchList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -8360,7 +8283,7 @@
         "searchList: runtime JavaScript or variable dependency",
         "request: request-specific headers require review"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -8394,7 +8317,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "directory initialization requires manual adaptation"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -8409,7 +8332,7 @@
       "reasons": [
         "chapterList: descending or length-dependent collection interval"
       ],
-      "priority": 1,
+      "priority": 2,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。"
       ]
@@ -8425,7 +8348,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
@@ -8443,7 +8366,7 @@
       "reasons": [
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
@@ -8459,7 +8382,7 @@
       "reasons": [
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
@@ -8477,7 +8400,7 @@
         "request: search expression requires runtime logic",
         "directory pagination selects all options; next-page semantics require adaptation"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -8493,7 +8416,7 @@
       "reasons": [
         "chapterTitle: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -8513,7 +8436,7 @@
         "body: JSON query needs filter/recursive mapping",
         "directory URL: dynamic directory request"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
@@ -8583,7 +8506,7 @@
       "reasons": [
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
@@ -8651,7 +8574,7 @@
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
@@ -8667,7 +8590,7 @@
       "reasons": [
         "dynamic or invalid headers"
       ],
-      "priority": 3,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
@@ -8687,7 +8610,7 @@
         "body: script replacement contains runtime logic",
         "request: repeated query parameter"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -8705,7 +8628,7 @@
         "request: search expression requires runtime logic",
         "body pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -8726,7 +8649,7 @@
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -8745,7 +8668,7 @@
         "chapterUrl: inline template combines independent fields",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
@@ -8781,7 +8704,7 @@
         "searchList: JSON query needs filter/recursive mapping",
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -8796,7 +8719,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -8814,7 +8737,7 @@
         "body pagination: runtime JavaScript or variable dependency",
         "dynamic or invalid headers"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -8851,7 +8774,7 @@
         "bookUrl: JSON query needs filter/recursive mapping",
         "request: dynamic request logic"
       ],
-      "priority": 3,
+      "priority": 1,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
@@ -8869,7 +8792,7 @@
       "reasons": [
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 3,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
@@ -8889,7 +8812,7 @@
         "request: search expression requires runtime logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -8906,7 +8829,7 @@
         "bookName: regex replacement capture syntax needs adaptation",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -8924,7 +8847,7 @@
         "chapterTitle: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -8941,7 +8864,7 @@
         "chapterTitle: runtime JavaScript or variable dependency",
         "chapterUrl: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -8975,7 +8898,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory URL: initialization and field parser cannot be composed"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -8994,7 +8917,7 @@
         "directory URL: regex replacement capture syntax needs adaptation",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。",
@@ -9013,7 +8936,7 @@
         "bookName: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -9041,7 +8964,7 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -9055,7 +8978,7 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -9071,7 +8994,7 @@
       "reasons": [
         "request: search expression requires runtime logic"
       ],
-      "priority": 3,
+      "priority": 5,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
@@ -9102,7 +9025,7 @@
         "bookName: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -9132,7 +9055,7 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -9150,7 +9073,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -9181,7 +9104,7 @@
       "reasons": [
         "directory URL: regex replacement capture syntax needs adaptation"
       ],
-      "priority": 2,
+      "priority": 1,
       "resolutionPlan": [
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
       ]
@@ -9202,7 +9125,7 @@
         "request: dynamic request logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -9222,7 +9145,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: fragment keyword requires runtime filtering"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -9241,7 +9164,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: fragment keyword requires runtime filtering"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -9260,7 +9183,7 @@
         "directory URL: dynamic directory request",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -9280,7 +9203,7 @@
         "book initialization: runtime JavaScript or variable dependency",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -9295,7 +9218,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -9313,7 +9236,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -9330,7 +9253,7 @@
         "body: runtime JavaScript or variable dependency",
         "body pagination: unguarded regex capture can throw on no match; native failure mapping requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
@@ -9359,7 +9282,7 @@
       "reasons": [
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
@@ -9402,7 +9325,7 @@
         "body: runtime JavaScript or variable dependency",
         "body pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -9417,7 +9340,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -9431,7 +9354,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -9466,7 +9389,7 @@
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "对照原阅读器实现核查具体选择或文本语义，补充行为样本后再迁移。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -9486,7 +9409,7 @@
         "body: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -9558,7 +9481,7 @@
         "request: search expression requires runtime logic",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
@@ -9575,7 +9498,7 @@
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
@@ -9614,7 +9537,7 @@
         "request: dynamic request logic",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -9653,7 +9576,7 @@
         "directory pagination: runtime JavaScript or variable dependency",
         "body pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -9671,7 +9594,7 @@
         "body: runtime JavaScript or variable dependency",
         "request: search expression requires runtime logic"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -9686,7 +9609,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -9701,7 +9624,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: nonliteral script return"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -9717,7 +9640,7 @@
         "bookUrl: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -9750,7 +9673,7 @@
       "reasons": [
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 3,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
@@ -9780,7 +9703,7 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -9794,7 +9717,7 @@
       "reasons": [
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -9814,7 +9737,7 @@
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
@@ -9836,7 +9759,7 @@
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
@@ -9882,7 +9805,7 @@
         "directory URL: directory URL contains request-specific options",
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -9919,7 +9842,7 @@
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
@@ -9941,7 +9864,7 @@
         "body pagination: runtime JavaScript or variable dependency",
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
@@ -9957,7 +9880,7 @@
       "reasons": [
         "body pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -9971,7 +9894,7 @@
       "reasons": [
         "chapterList: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
       ]
@@ -9987,7 +9910,7 @@
       "reasons": [
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -10004,7 +9927,7 @@
         "request: dynamic request logic",
         "directory pagination: capture boundary is not literal"
       ],
-      "priority": 3,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
@@ -10022,7 +9945,7 @@
         "body pagination: runtime JavaScript or variable dependency",
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
@@ -10039,7 +9962,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -10059,7 +9982,7 @@
         "chapterUrl: runtime JavaScript or variable dependency",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 3,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。",
@@ -10081,7 +10004,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -10098,7 +10021,7 @@
       "reasons": [
         "embedded credential header requires review"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "改用无需凭据的公开入口；不复制第三方Cookie、令牌或密钥。"
       ]
@@ -10148,7 +10071,7 @@
         "body: runtime JavaScript or variable dependency",
         "directory URL: initialization and field parser cannot be composed"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
@@ -10163,7 +10086,7 @@
       "reasons": [
         "directory URL: regex replacement capture syntax needs adaptation"
       ],
-      "priority": 2,
+      "priority": 1,
       "resolutionPlan": [
         "寻找原生捕获替换的直接示例，或按固定分隔符重写；核对未匹配及多匹配行为。"
       ]
@@ -10198,7 +10121,7 @@
       "reasons": [
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -10240,7 +10163,7 @@
       "reasons": [
         "headers: header contains nonstatic expressions"
       ],
-      "priority": 3,
+      "priority": 1,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
@@ -10260,7 +10183,7 @@
         "request: embedded credential parameter requires review",
         "directory URL: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。",
@@ -10279,7 +10202,7 @@
       "reasons": [
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -10295,7 +10218,7 @@
       "reasons": [
         "directory pagination: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -10328,7 +10251,7 @@
         "directory URL: runtime JavaScript or variable dependency",
         "book initialization: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 1,
       "resolutionPlan": [
         "核对目录跳转、当前页标记和跨页状态，静态化可表达部分并保留终止条件。"
       ]
@@ -10362,7 +10285,7 @@
         "chapterList: runtime JavaScript or variable dependency",
         "body: runtime JavaScript or variable dependency"
       ],
-      "priority": 4,
+      "priority": 5,
       "resolutionPlan": [
         "核对JSON响应结构，把递归或筛选查询改为有依据的明确路径；不猜固定层级。",
         "静态审查脚本的输入和输出，提取选择、拼接、清理等声明式逻辑，不执行脚本。"
@@ -10379,14 +10302,14 @@
       "reasons": [
         "request: search expression requires runtime logic"
       ],
-      "priority": 3,
+      "priority": 5,
       "resolutionPlan": [
         "逐字段对照URL、方法、参数、编码和请求头，只映射已确认的静态值。"
       ]
     }
   ],
   "validation": {
-    "behaviorTests": 63,
+    "behaviorTests": 64,
     "allExpressionsChecked": true,
     "liveSiteValidation": false,
     "iOSValidation": false
